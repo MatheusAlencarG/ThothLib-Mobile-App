@@ -1,4 +1,4 @@
-package com.example.thothlib
+package thothlib.mobile.app
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
