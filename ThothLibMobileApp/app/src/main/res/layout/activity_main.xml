@@ -16,7 +16,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Bem Vindo a \nThothLib"
+            android:text="@string/wellcome"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
             android:textSize="40sp" />
@@ -33,7 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="60dp"
-            android:text="Gestão inteligente é com a gente"
+            android:text="@string/catchphrase"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
             android:textSize="23sp" />
@@ -45,7 +45,7 @@
             android:layout_marginTop="50dp"
             android:backgroundTint="#2C2C2C"
             android:paddingHorizontal="40dp"
-            android:text="Login"
+            android:text="@string/login_title"
             android:textSize="30sp"
             app:cornerRadius="10dp"
             app:strokeColor="#04378F"

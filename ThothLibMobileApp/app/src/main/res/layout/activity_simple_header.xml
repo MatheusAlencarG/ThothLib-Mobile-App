@@ -14,9 +14,12 @@
         tools:ignore="MissingConstraints">
 
         <ImageView
+            android:id="@+id/home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/logo_white"/>
+            android:src="@mipmap/logo_white"
+            android:onClick="browsePage"
+            tools:ignore="OnClick" />
 
     </LinearLayout>
 

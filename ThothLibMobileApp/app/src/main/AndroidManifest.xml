@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ThothLibMobileApp">
         <activity
+            android:name=".UserPerfil"
+            android:exported="false" />
+        <activity
+            android:name=".SideBar"
+            android:exported="false" />
+        <activity
+            android:name=".Login"
+            android:exported="false" />
+        <activity
             android:name=".SimpleHeader"
             android:exported="false" />
         <activity

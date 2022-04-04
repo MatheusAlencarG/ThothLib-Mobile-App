@@ -1,6 +1,33 @@
 <resources>
     <string name="app_name">ThothLib-Mobile-App</string>
 
+    <!--  Strings do XML  -->
     <string name="register_description">Bem vindo, preencha campos abaixo para realizar o cadastro</string>
+    <string name="login_description">Faça login para acessar o nosso sistema.</string>
+    <string name="register">Cadastrar</string>
+    <string name="register_title">Cadastro</string>
+    <string name="login_title">Login</string>
+    <string name="login">Logar</string>
+    <string name="login_account">Entrar</string>
+    <string name="placeholder_email">Digite o seu e-mail</string>
+    <string name="placeholder_password">Digite a sua senha</string>
+    <string name="placeholder_password_confirm">Digite novamente a sua senha</string>
+    <string name="forgot_password">Esqueci minha senha</string>
+    <string name="create_account">Ainda não tem conta?</string>
+    <string name="already_regitered">Já possui uma conta?</string>
+    <string name="email">Email</string>
+    <string name="password">Senha</string>
+    <string name="wellcome">Bem vindo a \n ThothLib</string>
+    <string name="catchphrase">Gestão inteigente é com a gente</string>
+    <string name="menu_user">Perfil Usuário</string>
+    <string name="menu_book_shelf">Pesquisa Livros</string>
+    <string name="menu_email">Contate-nos</string>
+    <string name="menu_question">Perguntas Frequentes</string>
+    <string name="menu_list_user">Lista de Usuários</string>
+    <string name="menu_add_book">Adicionar Livro</string>
+    <string name="menu_logout">Sair</string>
+
+
+    <!--  Strings do Kotlin  -->
 
 </resources>
