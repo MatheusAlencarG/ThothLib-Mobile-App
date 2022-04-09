@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ThothLibMobileApp">
         <activity
+            android:name=".DevolucaoSucesso"
+            android:exported="false" />
+        <activity
+            android:name=".DevolucaoErro"
+            android:exported="false" />
+        <activity
+            android:name=".AddBook"
+            android:exported="false" />
+        <activity
             android:name=".UserPerfil"
             android:exported="false" />
         <activity
