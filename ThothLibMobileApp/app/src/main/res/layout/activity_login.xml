@@ -19,7 +19,7 @@
             android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/login_title"
+            android:text="@string"
             android:textColor="@color/ligth_blue_color"
             android:layout_below="@+id/header"
             android:textAlignment="center"
