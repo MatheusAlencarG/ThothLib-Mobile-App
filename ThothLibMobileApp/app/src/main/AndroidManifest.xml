@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ThothLibMobileApp">
         <activity
+            android:name=".InfoLivro"
+            android:exported="false" />
+        <activity
             android:name=".PerfilUsuario"
             android:exported="false" />
         <activity
