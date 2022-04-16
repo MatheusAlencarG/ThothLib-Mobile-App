@@ -28,12 +28,12 @@
     <string name="menu_add_book">Adicionar Livro</string>
     <string name="menu_logout">Sair</string>
     <string name="Autor">Autor</string>
-    <string name="Status">Status</string>
+    <string name="InfoPrateleira">Prateleira</string>
     <string name="Data_Publi">Data_Publi</string>
     <string name="Avaliação">Avaliação</string>
     <string name="Valor">Valor</string>
     <string name="fake_autor">David Flanagan</string>
-    <string name="fake_status">Disponível</string>
+    <string name="fake_prateleira">Z5</string>
     <string name="fake_data">10/08/2020</string>
     <string name="fake_avaliacao">10/10</string>
     <string name="btn_reserva">RESERVAR</string>
