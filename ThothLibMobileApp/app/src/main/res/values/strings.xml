@@ -10,9 +10,11 @@
     <string name="login_title">Login</string>
     <string name="login">Logar</string>
     <string name="login_account">Entrar</string>
-    <string name="placeholder_email">Digite o seu e-mail</string>
-    <string name="placeholder_password">Digite a sua senha</string>
-    <string name="placeholder_password_confirm">Digite novamente a sua senha</string>
+    <string name="placeholder_name">Nome: Matheus Alencar Garcia</string>
+    <string name="placeholder_cpf">CPF: 123.456.789.11</string>
+    <string name="placeholder_email">Email: exemplo@email.com</string>
+    <string name="placeholder_telefone">Telefone: (11)123456789</string>
+    <string name="placeholder_password">Senha: *************</string>
     <string name="forgot_password">Esqueci minha senha</string>
     <string name="create_account">Ainda não tem conta?</string>
     <string name="already_regitered">Já possui uma conta?</string>
@@ -47,5 +49,8 @@
 
 
     <!--  Strings do Kotlin  -->
+    <string name="auth_response">E-mail ou senha incorreto</string>
+    <string name="error_API">Erro na api, entrar em contato com o suporte</string>
+
 
 </resources>
