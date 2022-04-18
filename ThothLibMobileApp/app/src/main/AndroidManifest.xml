@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ThothLibMobileApp">
         <activity
+            android:name=".Contact"
+            android:exported="false" />
+        <activity
             android:name=".UserPerfil"
             android:exported="false" />
         <activity

@@ -26,6 +26,11 @@
     <string name="menu_list_user">Lista de Usuários</string>
     <string name="menu_add_book">Adicionar Livro</string>
     <string name="menu_logout">Sair</string>
+    <string name="btn_send">Enviar</string>
+    <string name="placeholder_description">Descrição</string>
+    <string name="placeholder_subject">Informe o assunto</string>
+    <string name="contact_description">Sugestões de livros, melhorias, críticas... Preencha o formulário abaixo para entrar em contato com a nossa equipe de atendimento!</string>
+    <string name="contact_title">Enviar</string>
 
 
     <!--  Strings do Kotlin  -->
