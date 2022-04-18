@@ -26,6 +26,7 @@
     <string name="menu_list_user">Lista de Usuários</string>
     <string name="menu_add_book">Adicionar Livro</string>
     <string name="menu_logout">Sair</string>
+    <string name="ver_ranking">Ver Ranking</string>
 
 
     <!--  Strings do Kotlin  -->
