@@ -3,11 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/jecsa/Desktop/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout/activity_add_book.xml" value="0.25" />
-        <entry key="..\:/Users/jecsa/Desktop/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout/activity_devolucao_erro.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/jecsa/Desktop/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout/activity_devolucao_sucesso.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/jecsa/Desktop/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout/activity_login.xml" value="0.225" />
-        <entry key="..\:/Users/jecsa/Desktop/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout/activity_main.xml" value="0.1814814814814815" />
+        <entry key="..\:/Users/jecsa/Desktop/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout/activity_add_book.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/jecsa/Desktop/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout/activity_login.xml" value="0.17777777777777778" />
+        <entry key="..\:/Users/lucas.pereira/Documents/facul/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout/activity_main.xml" value="0.11639492753623189" />
+        <entry key="..\:/Users/lucas.pereira/Documents/facul/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout/activity_perfil_usuario.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/malen/OneDrive/Documentos/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Users/malen/OneDrive/Documentos/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout/activity_main.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/malen/OneDrive/Documentos/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout/activity_register.xml" value="0.27291666666666664" />
@@ -22,6 +21,11 @@
         <entry key="..\:/Users/malen/OneDrive/Documentos/ThothLibMobileApp/app/src/main/res/layout/activity_main.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/malen/OneDrive/Documentos/ThothLibMobileApp/app/src/main/res/layout/activity_register.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/malen/OneDrive/Documentos/ThothLibMobileApp/app/src/main/res/layout/activity_simple_header.xml" value="0.25416666666666665" />
+        <entry key="..\:/projetos kotlin/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout/activity_info_livro.xml" value="0.37135416666666665" />
+        <entry key="..\:/projetos kotlin/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout/activity_login.xml" value="0.37135416666666665" />
+        <entry key="..\:/projetos kotlin/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout/activity_main.xml" value="0.37135416666666665" />
+        <entry key="..\:/projetos kotlin/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout/activity_register.xml" value="0.37135416666666665" />
+        <entry key="..\:/projetos kotlin/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout/activity_user_perfil.xml" value="0.37135416666666665" />
       </map>
     </option>
   </component>

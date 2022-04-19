@@ -41,11 +41,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@+id/description"
-            android:orientation="vertical"
             android:gravity="center"
+            android:orientation="vertical"
             android:paddingHorizontal="20dp">
 
             <EditText
+                android:id="@+id/et_titulo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -56,6 +57,7 @@
                 android:paddingVertical="10dp" />
 
             <EditText
+                android:id="@+id/et_autor"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -66,6 +68,7 @@
                 android:paddingVertical="10dp" />
 
             <EditText
+                android:id="@+id/et_editora"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -76,6 +79,7 @@
                 android:paddingVertical="10dp" />
 
             <EditText
+                android:id="@+id/et_edicao"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -86,6 +90,7 @@
                 android:paddingVertical="10dp" />
 
             <EditText
+                android:id="@+id/et_descricao"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
                 android:layout_marginTop="10dp"
@@ -97,6 +102,7 @@
                 android:paddingVertical="10dp" />
 
             <EditText
+                android:id="@+id/et_quantidade"
                 android:layout_width="135dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -114,6 +120,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="15dp"
                 android:backgroundTint="@color/dark_blue"
+                android:onClick="salvarLivro"
                 android:text="@string/register_book"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
