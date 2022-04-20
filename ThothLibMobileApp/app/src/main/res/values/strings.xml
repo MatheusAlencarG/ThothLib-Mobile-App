@@ -3,6 +3,7 @@
 
     <!--  Strings do XML  -->
     <string name="register_description">Bem vindo, preencha campos abaixo para realizar o cadastro</string>
+    <string name="fake_text">Programando com JavaScript</string>
     <string name="login_description">Faça login para acessar o nosso sistema.</string>
     <string name="register">Cadastrar</string>
     <string name="register_book">Cadastrar Livro</string>
@@ -10,9 +11,11 @@
     <string name="login_title">Login</string>
     <string name="login">Logar</string>
     <string name="login_account">Entrar</string>
-    <string name="placeholder_email">Digite o seu e-mail</string>
-    <string name="placeholder_password">Digite a sua senha</string>
-    <string name="placeholder_password_confirm">Digite novamente a sua senha</string>
+    <string name="placeholder_name">Nome: Matheus Alencar Garcia</string>
+    <string name="placeholder_cpf">CPF: 123.456.789.11</string>
+    <string name="placeholder_email">Email: exemplo@email.com</string>
+    <string name="placeholder_telefone">Telefone: (11)123456789</string>
+    <string name="placeholder_password">Senha: *************</string>
     <string name="forgot_password">Esqueci minha senha</string>
     <string name="create_account">Ainda não tem conta?</string>
     <string name="already_regitered">Já possui uma conta?</string>
@@ -34,6 +37,22 @@
     <string name="add_book_placeholder_desc">Descrição</string>
     <string name="add_book_placeholder_qtde">Quantidade</string>
     <string name="menu_logout">Sair</string>
+    <string name="Autor">Autor</string>
+    <string name="InfoPrateleira">Prateleira</string>
+    <string name="Data_Publi">Data_Publi</string>
+    <string name="Avaliação">Avaliação</string>
+    <string name="Valor">Valor</string>
+    <string name="fake_autor">David Flanagan</string>
+    <string name="fake_prateleira">Z5</string>
+    <string name="fake_data">10/08/2020</string>
+    <string name="fake_avaliacao">10/10</string>
+    <string name="btn_reserva">RESERVAR</string>
+    <string name="btn_retirar">RETIRAR</string>
+    <string name="btn_renovar">RENOVAR</string>
+    <string name="btn_devolver">DEVOLVER</string>
+    <string name="btn_comprar">COMPRAR</string>
+    <string name="btn_baixar">BAIXAR</string>
+    <string name="fake_descricao">JavaScript é a linguagem de programação da Web. A maioria dos sites modernos usa JavaScript, e todos os navegadores – em computadores de mesa, consoles de jogos, tablets e smartphones – incluem interpretadores JavaScript. Isso a torna uma das linguagens de programação mais importantes atualmente e uma das tecnologias que todo desenvolvedor Web deve conhecer</string>
     <string name="text_screen_devolucao">Devolução</string>
     <string name="text_screen_retirada">(Retirada)</string>
     <string name="text_screen_message">Ops! Algo deu errado com a sua devolução, por favor, tente novamente. Caso o erro persista, entre em contato conosco.</string>
@@ -44,5 +63,8 @@
     <string name="text_screen_points"><u>+ 10Pts</u></string>
 
     <!--  Strings do Kotlin  -->
+    <string name="auth_response">E-mail ou senha incorreto</string>
+    <string name="error_API">Erro na api, entrar em contato com o suporte</string>
+
 
 </resources>

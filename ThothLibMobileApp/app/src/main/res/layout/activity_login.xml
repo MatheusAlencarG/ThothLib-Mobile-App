@@ -33,49 +33,38 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/title"
             android:layout_marginTop="17dp"
-            android:text="@string/login_description"
-            android:textSize="20sp"
-            android:textColor="@color/black"
-            android:textAlignment="center"
             android:paddingHorizontal="50dp"
-            />
+            android:text="@string/login_description"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@+id/description"
             android:orientation="vertical"
-            android:paddingHorizontal="20dp">
+            android:paddingHorizontal="20dp"
+            android:layout_marginTop="45dp">
 
-            <TextView
+            <EditText
+                android:id="@+id/et_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:text="@string/email"
-                android:textColor="@color/ligth_grey"
-                android:textSize="22sp" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:background="@drawable/border_blue"
                 android:hint="@string/placeholder_email"
                 android:inputType="textEmailAddress"
                 android:paddingHorizontal="20dp"
                 android:paddingVertical="10dp" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:text="@string/password"
-                android:textColor="@color/ligth_grey"
-                android:textSize="22sp" />
 
             <EditText
+                android:id="@+id/et_senha"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/border_blue"
+                android:layout_marginTop="45dp"
                 android:hint="@string/placeholder_password"
                 android:inputType="textPassword"
                 android:paddingHorizontal="20dp"
@@ -86,12 +75,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="25dp"
                 android:backgroundTint="@color/dark_blue"
                 android:text="@string/login_account"
                 android:textColor="@color/white"
                 android:textSize="20sp"
-                android:onClick="browsePage"/>
+                android:onClick="autentication"/>
+
+            <TextView
+                android:id="@+id/tv_auth_Response"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:textColor="#DB0000"
+                android:textSize="18sp"
+                android:textAlignment="center" />
 
             <TextView
                 android:layout_width="match_parent"
