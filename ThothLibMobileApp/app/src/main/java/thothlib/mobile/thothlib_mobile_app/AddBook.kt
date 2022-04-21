@@ -41,7 +41,7 @@ class AddBook : AppCompatActivity() {
                 etQuantidade.text.toString().toInt()
         )
 
-        val postLivro = ThothLibs.criar().post(novoLivro)
+        val postLivro = ThothLibs.criar("").post(novoLivro)
 
         postLivro.enqueue(object : retrofit2.Callback<Void> {
             override fun onResponse(call: Call<Void>, response: Response<Void>) {
