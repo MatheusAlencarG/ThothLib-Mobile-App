@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Contact">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include
+            android:id="@+id/header"
+            layout="@layout/activity_simple_header"
+            />
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/contact_title"
+            android:textColor="@color/ligth_blue_color"
+            android:layout_below="@+id/header"
+            android:textAlignment="center"
+            android:textSize="40sp"
+            android:layout_marginTop="50dp"
+            />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:layout_marginTop="17dp"
+            android:paddingHorizontal="75dp"
+            android:text="@string/contact_description"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/description"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/border_blue"
+                android:hint="@string/placeholder_subject"
+                android:inputType="textEmailAddress"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/border_blue"
+                android:hint="@string/placeholder_description"
+                android:inputType="textEmailAddress"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="100dp" />
+            <Button
+                android:id="@+id/cadastrar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/dark_blue"
+                android:text="@string/btn_send"
+                android:textColor="@color/white"
+                android:layout_marginTop="15dp"
+                android:textSize="20sp"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

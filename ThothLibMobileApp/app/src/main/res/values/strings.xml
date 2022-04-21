@@ -27,6 +27,11 @@
     <string name="menu_list_user">Lista de Usuários</string>
     <string name="menu_add_book">Adicionar Livro</string>
     <string name="menu_logout">Sair</string>
+    <string name="btn_send">Enviar</string>
+    <string name="placeholder_description">Descrição</string>
+    <string name="placeholder_subject">Informe o assunto</string>
+    <string name="contact_description">Sugestões de livros, melhorias, críticas... Preencha o formulário abaixo para entrar em contato com a nossa equipe de atendimento!</string>
+    <string name="contact_title">Enviar</string>
     <string name="Autor">Autor</string>
     <string name="InfoPrateleira">Prateleira</string>
     <string name="Data_Publi">Data_Publi</string>
@@ -43,7 +48,6 @@
     <string name="btn_comprar">COMPRAR</string>
     <string name="btn_baixar">BAIXAR</string>
     <string name="fake_descricao">JavaScript é a linguagem de programação da Web. A maioria dos sites modernos usa JavaScript, e todos os navegadores – em computadores de mesa, consoles de jogos, tablets e smartphones – incluem interpretadores JavaScript. Isso a torna uma das linguagens de programação mais importantes atualmente e uma das tecnologias que todo desenvolvedor Web deve conhecer</string>
-
 
 
     <!--  Strings do Kotlin  -->
