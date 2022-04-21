@@ -34,7 +34,7 @@ class InfoLivro : AppCompatActivity() {
         val id = 2
 
         // objeto do endpoint de GET /filmes/{id}
-        val getLivro = ThothLibs.criar().get(id)
+        val getLivro = ThothLibs.criar("biblioteca").getLivro(id)
 
         tvAutor.text = "Mudou"
 
@@ -44,7 +44,7 @@ class InfoLivro : AppCompatActivity() {
         val id = 2
 
         // objeto do endpoint de GET /filmes/{id}
-        val getLivro = ThothLibs.criar().get(id)
+        val getLivro = ThothLibs.criar("biblioteca").getLivro(id)
 
         // Callback do pacote retrofit2
         getLivro.enqueue(object : Callback<Livro> {
