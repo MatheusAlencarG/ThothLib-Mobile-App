@@ -4,13 +4,52 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.EditText
+import android.widget.TextView
+import android.widget.Toast
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class Login : AppCompatActivity() {
 
+    lateinit var etEmail:EditText
+    lateinit var etSenha:EditText
+    lateinit var tvAuthResponse:TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+
+        etEmail = findViewById(R.id.et_email)
+        etSenha = findViewById(R.id.et_senha)
+        tvAuthResponse = findViewById(R.id.tv_auth_Response)
+    }
+
+    fun autentication(v:View) {
+        val email = etEmail.text.toString()
+        val senha = etSenha.text.toString()
+
+        val getAutentication = ThothLibs.criar("autenticacao").autentication(email, senha)
+
+        getAutentication.enqueue(object : Callback<Void> {
+            override fun onResponse(call: Call<Void>, response: Response<Void>) {
+                if (response.isSuccessful) {
+                    browsePage(findViewById(R.id.entrar));
+                } else {
+                    tvAuthResponse.setVisibility(View.VISIBLE)
+                    tvAuthResponse.text = getString(R.string.auth_response)
+                }
+            }
+
+            override fun onFailure(call: Call<Void>, t: Throwable) {
+                t.printStackTrace()
+                Toast.makeText(baseContext, "Erro na API", Toast.LENGTH_SHORT).show()
+                tvAuthResponse.setVisibility(View.VISIBLE)
+                tvAuthResponse.text = getString(R.string.error_API)
+            }
+
+        })
 
     }
 
