@@ -43,7 +43,7 @@ class Register : AppCompatActivity() {
 
 
         val postUser = ThothLibs.criar("").registerUser(newUser)
-        Toast.makeText(baseContext, "${newUser}${postUser.request()}", Toast.LENGTH_SHORT).show()
+        // Toast.makeText(baseContext, "${newUser}${postUser.request()}", Toast.LENGTH_SHORT).show()
 
         postUser.enqueue(object : Callback<Void> {
             override fun onResponse(call: Call<Void>, response: Response<Void>) {
