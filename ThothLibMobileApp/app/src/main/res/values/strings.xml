@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ThothLib-Mobile-App</string>
+    <string name="app_name">ThothLib</string>
 
     <!--  Strings do XML  -->
     <string name="register_description">Bem vindo, preencha campos abaixo para realizar o cadastro</string>
