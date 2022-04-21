@@ -10,6 +10,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
         android:theme="@style/Theme.ThothLibMobileApp">
         <activity
             android:name=".Contact"
@@ -19,6 +20,15 @@
             android:exported="false" />
         <activity
             android:name=".PerfilUsuario"
+            android:exported="false" />
+        <activity
+            android:name=".DevolucaoSucesso"
+            android:exported="false" />
+        <activity
+            android:name=".DevolucaoErro"
+            android:exported="false" />
+        <activity
+            android:name=".AddBook"
             android:exported="false" />
         <activity
             android:name=".UserPerfil"
