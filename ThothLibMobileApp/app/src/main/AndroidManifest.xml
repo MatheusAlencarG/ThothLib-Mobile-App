@@ -13,6 +13,9 @@
         android:usesCleartextTraffic="true"
         android:theme="@style/Theme.ThothLibMobileApp">
         <activity
+            android:name=".Contact"
+            android:exported="false" />
+        <activity
             android:name=".InfoLivro"
             android:exported="false" />
         <activity

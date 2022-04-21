@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ThothLib-Mobile-App</string>
+    <string name="app_name">ThothLib</string>
 
     <!--  Strings do XML  -->
     <string name="register_description">Bem vindo, preencha campos abaixo para realizar o cadastro</string>
@@ -37,6 +37,11 @@
     <string name="add_book_placeholder_desc">Descrição</string>
     <string name="add_book_placeholder_qtde">Quantidade</string>
     <string name="menu_logout">Sair</string>
+    <string name="btn_send">Enviar</string>
+    <string name="placeholder_description">Descrição</string>
+    <string name="placeholder_subject">Informe o assunto</string>
+    <string name="contact_description">Sugestões de livros, melhorias, críticas... Preencha o formulário abaixo para entrar em contato com a nossa equipe de atendimento!</string>
+    <string name="contact_title">Enviar</string>
     <string name="Autor">Autor</string>
     <string name="InfoPrateleira">Prateleira</string>
     <string name="Data_Publi">Data_Publi</string>
