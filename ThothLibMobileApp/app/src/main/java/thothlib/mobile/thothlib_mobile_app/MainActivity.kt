@@ -12,7 +12,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun browsePage(V: View) {
-        val registerScreen = Intent(this, Register::class.java)
+        val registerScreen = Intent(this, InfoLivro::class.java)
         startActivity(registerScreen)
     }
+
+
 }

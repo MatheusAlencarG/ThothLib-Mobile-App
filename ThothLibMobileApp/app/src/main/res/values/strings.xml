@@ -3,6 +3,7 @@
 
     <!--  Strings do XML  -->
     <string name="register_description">Bem vindo, preencha campos abaixo para realizar o cadastro</string>
+    <string name="fake_text">Programando com JavaScript</string>
     <string name="login_description">Faça login para acessar o nosso sistema.</string>
     <string name="register">Cadastrar</string>
     <string name="register_title">Cadastro</string>
@@ -31,6 +32,22 @@
     <string name="placeholder_subject">Informe o assunto</string>
     <string name="contact_description">Sugestões de livros, melhorias, críticas... Preencha o formulário abaixo para entrar em contato com a nossa equipe de atendimento!</string>
     <string name="contact_title">Enviar</string>
+    <string name="Autor">Autor</string>
+    <string name="InfoPrateleira">Prateleira</string>
+    <string name="Data_Publi">Data_Publi</string>
+    <string name="Avaliação">Avaliação</string>
+    <string name="Valor">Valor</string>
+    <string name="fake_autor">David Flanagan</string>
+    <string name="fake_prateleira">Z5</string>
+    <string name="fake_data">10/08/2020</string>
+    <string name="fake_avaliacao">10/10</string>
+    <string name="btn_reserva">RESERVAR</string>
+    <string name="btn_retirar">RETIRAR</string>
+    <string name="btn_renovar">RENOVAR</string>
+    <string name="btn_devolver">DEVOLVER</string>
+    <string name="btn_comprar">COMPRAR</string>
+    <string name="btn_baixar">BAIXAR</string>
+    <string name="fake_descricao">JavaScript é a linguagem de programação da Web. A maioria dos sites modernos usa JavaScript, e todos os navegadores – em computadores de mesa, consoles de jogos, tablets e smartphones – incluem interpretadores JavaScript. Isso a torna uma das linguagens de programação mais importantes atualmente e uma das tecnologias que todo desenvolvedor Web deve conhecer</string>
 
 
     <!--  Strings do Kotlin  -->
