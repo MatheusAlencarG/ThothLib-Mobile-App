@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun browsePage(V: View) {
-        val registerScreen = Intent(this, Login::class.java)
+        val registerScreen = Intent(this, AddBook::class.java)
         startActivity(registerScreen)
     }
 

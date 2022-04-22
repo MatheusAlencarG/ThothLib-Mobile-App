@@ -32,23 +32,22 @@ class AddBook : AppCompatActivity() {
     fun salvarLivro(V: View) {
 
         val novoLivro = AddNewBook(
-                0,
-                etTitulo.text.toString(),
                 etAutor.text.toString(),
-                etEditora.text.toString(),
-                etEdicao.text.toString(),
                 etDescricao.text.toString(),
-                etQuantidade.text.toString().toInt()
+                etEdicao.text.toString(),
+                etEditora.text.toString(),
+                etQuantidade.text.toString().toInt(),
+                etTitulo.text.toString()
         )
 
-        val postLivro = ThothLibs.criar("").post(novoLivro)
+        val postLivro = ThothLibs.criar("biblioteca").postBook(2, novoLivro)
 
         postLivro.enqueue(object : retrofit2.Callback<Void> {
             override fun onResponse(call: Call<Void>, response: Response<Void>) {
                 if (response.isSuccessful) {
                     Toast.makeText(baseContext, "Livro Cadastrado!", Toast.LENGTH_SHORT).show()
                 } else {
-                    Toast.makeText(baseContext, "Erro ${response.errorBody()}", Toast.LENGTH_SHORT)
+                    Toast.makeText(baseContext, "Erro / ${response.errorBody()} / ${response.message()} / ${response.body()}", Toast.LENGTH_SHORT)
                             .show()
                 }
             }

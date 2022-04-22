@@ -18,9 +18,9 @@ interface ThothLibs {
 
     @POST("{email}/{senha}")
     fun autentication(@Path("email") email:String, @Path("senha") senha:String) : Call<Void>
-  
-    @POST("livros")
-    fun post(@Body novoLivro: AddNewBook): Call<Void>
+
+    @POST("{idAdmin}")
+    fun postBook(@Path("idAdmin") idAdmin:Int, @Body newBook: AddNewBook) : Call<Void>
 
     companion object {
 
