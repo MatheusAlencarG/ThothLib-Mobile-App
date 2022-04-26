@@ -1,5 +1,6 @@
 package thothlib.mobile.thothlib_mobile_app
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -46,6 +47,7 @@ class AddBook : AppCompatActivity() {
             override fun onResponse(call: Call<Void>, response: Response<Void>) {
                 if (response.isSuccessful) {
                     Toast.makeText(baseContext, "Livro Cadastrado!", Toast.LENGTH_SHORT).show()
+                    browsePage()
                 } else {
                     Toast.makeText(baseContext, "Erro / ${response.errorBody()} / ${response.message()} / ${response.body()}", Toast.LENGTH_SHORT)
                             .show()
@@ -57,5 +59,10 @@ class AddBook : AppCompatActivity() {
                 Toast.makeText(baseContext, "Erro na API", Toast.LENGTH_SHORT).show()
             }
         })
+    }
+
+    fun browsePage() {
+        val bookScreen = Intent(this, InfoLivro::class.java)
+        startActivity(bookScreen)
     }
 }
