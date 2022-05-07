@@ -14,18 +14,20 @@ interface ThothLibs {
     fun getLivro(@Path("idLivro") idLivro:Int) : Call<Livro>
 
     @POST("/aluno")
-    fun registerUser(@Body newUser:User) : Call<Void>
+    fun registerUser(@Body newUser:NewUser) : Call<Void>
 
     @POST("{email}/{senha}")
     fun autentication(@Path("email") email:String, @Path("senha") senha:String) : Call<Void>
-  
-    @POST("livros")
-    fun post(@Body novoLivro: AddNewBook): Call<Void>
+
+    @POST("{idAdmin}")
+    fun postBook(@Path("idAdmin") idAdmin:Int, @Body newBook: AddNewBook) : Call<Void>
+
+    @GET("{idUsuario}")
+    fun getUsuario(@Path("idUsuario") idUserPerfil:Int) : Call<User>
 
     companion object {
 
-        var BASE_URL = "http://10.0.2.2:8080/"
-        // Para testar via cabo USB numa API local: "http://10.0.2.2:8080/"
+        var BASE_URL = "http://18.214.213.57:8080/"
 
         fun criar(complementBase_URL:String) : ThothLibs {
             val retrofit = Retrofit.Builder()
