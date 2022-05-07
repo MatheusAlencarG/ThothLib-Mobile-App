@@ -6,4 +6,154 @@
     android:layout_height="match_parent"
     tools:context=".PerfilUsuario">
 
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingVertical="30dp"
+        >
+
+        <ImageView
+            android:id="@+id/userImg"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@mipmap/user_img"
+            android:layout_marginBottom="30dp"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="15dp">
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Matheus Alencarros"
+                android:textSize="30sp"
+                android:textColor="#000000"
+                android:layout_gravity="bottom"/>
+            <ImageView
+                android:id="@+id/changeIcon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@mipmap/icon_change_name"
+                android:layout_marginLeft="25dp"/>
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/userEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Matheus.alencar@bandtec.com"
+            android:textSize="25sp"
+            android:textColor="#000000"
+            android:layout_marginBottom="15dp"/>
+        <RelativeLayout
+            android:id="@+id/rlName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="30sp"
+            android:layout_marginBottom="15dp"
+            >
+
+            <TextView
+                android:id="@+id/userRa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="01202054"
+                android:textSize="25sp"
+                android:textColor="#000000"
+                android:layout_alignParentLeft="true"/>
+
+            <TextView
+                android:id="@+id/userPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="(11) 989845567"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="15dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginHorizontal="50sp"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Usuário Nível"
+                android:textSize="30sp"
+                android:textColor="#000000"
+                android:layout_marginRight="30dp"
+                />
+
+            <TextView
+                android:id="@+id/userLevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:textColor="#04378F"
+                android:textSize="50sp"
+
+                />
+
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="15dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginHorizontal="20sp"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12 Livros lidos"
+                android:textSize="25sp"
+                android:textColor="#000000"
+                android:layout_marginRight="30dp"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="05 Resenhas"
+                android:textColor="#04378F"
+                android:textSize="25sp"
+
+                />
+
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

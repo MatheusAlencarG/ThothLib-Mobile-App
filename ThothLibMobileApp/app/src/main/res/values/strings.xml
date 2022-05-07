@@ -37,6 +37,7 @@
     <string name="add_book_placeholder_desc">Descrição</string>
     <string name="add_book_placeholder_qtde">Quantidade</string>
     <string name="menu_logout">Sair</string>
+    <string name="ver_ranking">Ver Ranking</string>
     <string name="btn_send">Enviar</string>
     <string name="placeholder_description">Descrição</string>
     <string name="placeholder_subject">Informe o assunto</string>
