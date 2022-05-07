@@ -1,11 +1,10 @@
 package thothlib.mobile.thothlib_mobile_app
 
 data class AddNewBook(
-    val id: Int,
-    val titulo: String,
     val autor: String,
-    val editora: String,
-    val edicao: String,
     val descricao: String,
-    val quantidade: Number
+    val edicao: String,
+    val editora: String,
+    val qtdEstoque: Number,
+    val titulo: String
 )

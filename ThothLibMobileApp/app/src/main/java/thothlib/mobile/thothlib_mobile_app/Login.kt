@@ -55,7 +55,7 @@ class Login : AppCompatActivity() {
 
     fun browsePage(botao: View) {
         val registerScreen = Intent(this, Register::class.java)
-        val perfilScreen = Intent(this, UserPerfil::class.java)
+        val perfilScreen = Intent(this, AddBook::class.java)
         val homeScreen = Intent(this, MainActivity::class.java)
 
         when (botao.id) {

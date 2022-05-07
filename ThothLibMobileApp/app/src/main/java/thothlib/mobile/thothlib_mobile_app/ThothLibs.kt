@@ -14,13 +14,16 @@ interface ThothLibs {
     fun getLivro(@Path("idLivro") idLivro:Int) : Call<Livro>
 
     @POST("/aluno")
-    fun registerUser(@Body newUser:User) : Call<Void>
+    fun registerUser(@Body newUser:NewUser) : Call<Void>
 
     @POST("{email}/{senha}")
     fun autentication(@Path("email") email:String, @Path("senha") senha:String) : Call<Void>
-  
-    @POST("livros")
-    fun post(@Body novoLivro: AddNewBook): Call<Void>
+
+    @POST("{idAdmin}")
+    fun postBook(@Path("idAdmin") idAdmin:Int, @Body newBook: AddNewBook) : Call<Void>
+
+    @GET("{idUsuario}")
+    fun getUsuario(@Path("idUsuario") idUserPerfil:Int) : Call<User>
 
     companion object {
 

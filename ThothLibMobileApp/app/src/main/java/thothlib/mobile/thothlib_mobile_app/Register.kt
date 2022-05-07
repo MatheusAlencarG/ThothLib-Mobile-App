@@ -33,7 +33,7 @@ class Register : AppCompatActivity() {
     }
 
     fun registerUser(v:View) {
-        val newUser = User(
+        val newUser = NewUser(
             etNome.text.toString(),
             etCPF.text.toString(),
             etEmail.text.toString(),

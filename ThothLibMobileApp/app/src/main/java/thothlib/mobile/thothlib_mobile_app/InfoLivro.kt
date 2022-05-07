@@ -27,6 +27,7 @@ class InfoLivro : AppCompatActivity() {
         tvAvaliacao = findViewById(R.id.tv_avaliacao)
         tvDescricao = findViewById(R.id.tv_description)
 
+        consultarLivro();
     }
 
     fun teste(v: View){
@@ -40,7 +41,7 @@ class InfoLivro : AppCompatActivity() {
 
     }
 
-    fun consultarLivro(v: View) {
+    fun consultarLivro() {
         val id = 2
 
         // objeto do endpoint de GET /filmes/{id}
