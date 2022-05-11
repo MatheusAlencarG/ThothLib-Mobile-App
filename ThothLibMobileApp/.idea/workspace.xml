@@ -10,9 +10,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0653f202-7b06-4bd7-88a6-c1a4154c7eed" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/thothlib/mobile/thothlib_mobile_app/AddBookFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/thothlib/mobile/thothlib_mobile_app/ContactFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/thothlib/mobile/thothlib_mobile_app/UserPerfilFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_add_book.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_contact.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_user_perfil.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/thothlib/mobile/thothlib_mobile_app/ThothLibs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/thothlib/mobile/thothlib_mobile_app/ThothLibs.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/thothlib/mobile/thothlib_mobile_app/AddBook.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/thothlib/mobile/thothlib_mobile_app/Contact.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/thothlib/mobile/thothlib_mobile_app/Login.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/thothlib/mobile/thothlib_mobile_app/Login.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/thothlib/mobile/thothlib_mobile_app/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/thothlib/mobile/thothlib_mobile_app/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/thothlib/mobile/thothlib_mobile_app/PerfilUsuario.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/thothlib/mobile/thothlib_mobile_app/SideBar.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/thothlib/mobile/thothlib_mobile_app/Browser.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/thothlib/mobile/thothlib_mobile_app/UserPerfil.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_book.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_contact.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_perfil_usuario.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_side_bar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_browser.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_user_perfil.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +95,7 @@
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="cidr.known.project.marker" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../AppMemorias/AppMemorias" />
     <property name="project.structure.last.edited" value="SDK Location" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -85,6 +104,18 @@
     <option name="LAST_EDITED_BUILD_TYPE" value="release" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\malen\OneDrive\Documentos\ThothLibMobileApp\ThothLibMobileApp\app\src\main\java\thothlib\mobile\thothlib_mobile_app\backup" />
+      <recent name="C:\Users\malen\OneDrive\Documentos\ThothLibMobileApp\ThothLibMobileApp\app\src\main\res\layout\backup" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\malen\OneDrive\Documentos\ThothLibMobileApp\ThothLibMobileApp\app\src\main\res\layout\backup" />
+      <recent name="C:\Users\malen\OneDrive\Documentos\ThothLibMobileApp\ThothLibMobileApp\app\src\main\res\layout" />
+      <recent name="C:\Users\malen\OneDrive\Documentos\ThothLibMobileApp\ThothLibMobileApp\app\src\main\res\layout\fragments" />
+    </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="thothlib.mobile.thothlib_mobile_app.backup" />
+    </key>
     <key name="android.template.122854500">
       <recent name="thothlib.mobile.thothlib_mobile_app" />
     </key>
