@@ -6,128 +6,122 @@
     tools:context=".AddBookFragment"
     android:id="@+id/fragmentlistavideos">
 
-    <ScrollView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical">
 
-        <RelativeLayout
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/menu_add_book"
+            android:textAlignment="center"
+            android:textColor="@color/ligth_blue_color"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:layout_marginTop="17dp"
+            android:paddingHorizontal="50dp"
+            android:text="@string/menu_add_book_text"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_gravity="center_vertical">
+            android:layout_below="@+id/description"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp">
 
-            <TextView
-                android:id="@+id/title"
+            <EditText
+                android:id="@+id/et_titulo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="@string/menu_add_book"
-                android:textAlignment="center"
-                android:textColor="@color/ligth_blue_color"
-                android:textSize="40sp" />
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border_blue"
+                android:hint="@string/add_book_placeholder_titulo"
+                android:inputType="text"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp" />
 
-            <TextView
-                android:id="@+id/description"
+            <EditText
+                android:id="@+id/et_autor"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/title"
-                android:layout_marginTop="17dp"
-                android:paddingHorizontal="50dp"
-                android:text="@string/menu_add_book_text"
-                android:textAlignment="center"
-                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border_blue"
+                android:hint="@string/add_book_placeholder_autor"
+                android:inputType="text"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp" />
+
+            <EditText
+                android:id="@+id/et_editora"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border_blue"
+                android:hint="@string/add_book_placeholder_editora"
+                android:inputType="text"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp" />
+
+            <EditText
+                android:id="@+id/et_edicao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border_blue"
+                android:hint="@string/add_book_placeholder_edicao"
+                android:inputType="text"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp" />
+
+            <EditText
+                android:id="@+id/et_descricao"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border_blue"
+                android:gravity="top"
+                android:hint="@string/add_book_placeholder_desc"
+                android:inputType="text"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp" />
+
+            <EditText
+                android:id="@+id/et_quantidade"
+                android:layout_width="135dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border_blue"
+                android:gravity="center"
+                android:hint="@string/add_book_placeholder_qtde"
+                android:inputType="number"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp" />
+
+            <Button
+                android:id="@+id/register_book"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="@color/dark_blue"
+                android:text="@string/register_book"
+                android:textColor="@color/white"
                 android:textSize="20sp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_below="@+id/description"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:paddingHorizontal="20dp">
+        </LinearLayout>
 
-                <EditText
-                    android:id="@+id/et_titulo"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/border_blue"
-                    android:hint="@string/add_book_placeholder_titulo"
-                    android:inputType="text"
-                    android:paddingHorizontal="20dp"
-                    android:paddingVertical="10dp" />
-
-                <EditText
-                    android:id="@+id/et_autor"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/border_blue"
-                    android:hint="@string/add_book_placeholder_autor"
-                    android:inputType="text"
-                    android:paddingHorizontal="20dp"
-                    android:paddingVertical="10dp" />
-
-                <EditText
-                    android:id="@+id/et_editora"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/border_blue"
-                    android:hint="@string/add_book_placeholder_editora"
-                    android:inputType="text"
-                    android:paddingHorizontal="20dp"
-                    android:paddingVertical="10dp" />
-
-                <EditText
-                    android:id="@+id/et_edicao"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/border_blue"
-                    android:hint="@string/add_book_placeholder_edicao"
-                    android:inputType="text"
-                    android:paddingHorizontal="20dp"
-                    android:paddingVertical="10dp" />
-
-                <EditText
-                    android:id="@+id/et_descricao"
-                    android:layout_width="match_parent"
-                    android:layout_height="130dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/border_blue"
-                    android:gravity="top"
-                    android:hint="@string/add_book_placeholder_desc"
-                    android:inputType="text"
-                    android:paddingHorizontal="20dp"
-                    android:paddingVertical="10dp" />
-
-                <EditText
-                    android:id="@+id/et_quantidade"
-                    android:layout_width="135dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/border_blue"
-                    android:gravity="center"
-                    android:hint="@string/add_book_placeholder_qtde"
-                    android:inputType="number"
-                    android:paddingHorizontal="20dp"
-                    android:paddingVertical="10dp" />
-
-                <Button
-                    android:id="@+id/register_book"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="15dp"
-                    android:backgroundTint="@color/dark_blue"
-                    android:text="@string/register_book"
-                    android:textColor="@color/white"
-                    android:textSize="20sp" />
-
-            </LinearLayout>
-
-        </RelativeLayout>
-
-    </ScrollView>
+    </RelativeLayout>
 
 </FrameLayout>

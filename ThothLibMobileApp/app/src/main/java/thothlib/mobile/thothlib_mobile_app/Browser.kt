@@ -42,6 +42,7 @@ class Browser : AppCompatActivity() {
             R.id.questions -> questionsFragment()
             R.id.list_user -> listUserFragment()
             R.id.add_book -> addBookFragment()
+            R.id.info_livro -> infoBookFragment()
         }
     }
 
@@ -54,7 +55,7 @@ class Browser : AppCompatActivity() {
 
     fun searchBookFragment() {
         val trasaction = supportFragmentManager.beginTransaction()
-        trasaction.replace(R.id.fragment_pages, AddBookFragment::class.java, null)
+        trasaction.replace(R.id.fragment_pages, SeachBookFragment::class.java, null)
         trasaction.commit()
         toglleSideBar(null)
     }
@@ -68,14 +69,14 @@ class Browser : AppCompatActivity() {
 
     fun questionsFragment() {
         val trasaction = supportFragmentManager.beginTransaction()
-        trasaction.replace(R.id.fragment_pages, AddBookFragment::class.java, null)
+        trasaction.replace(R.id.fragment_pages, QuestionFragment::class.java, null)
         trasaction.commit()
         toglleSideBar(null)
     }
 
     fun listUserFragment() {
         val trasaction = supportFragmentManager.beginTransaction()
-        trasaction.replace(R.id.fragment_pages, AddBookFragment::class.java, null)
+        trasaction.replace(R.id.fragment_pages, ListUserFragment::class.java, null)
         trasaction.commit()
         toglleSideBar(null)
     }
@@ -83,6 +84,13 @@ class Browser : AppCompatActivity() {
     fun addBookFragment() {
         val trasaction = supportFragmentManager.beginTransaction()
         trasaction.replace(R.id.fragment_pages, AddBookFragment::class.java, null)
+        trasaction.commit()
+        toglleSideBar(null)
+    }
+
+    fun infoBookFragment() {
+        val trasaction = supportFragmentManager.beginTransaction()
+        trasaction.replace(R.id.fragment_pages, InfoLivroFragment::class.java, null)
         trasaction.commit()
         toglleSideBar(null)
     }
