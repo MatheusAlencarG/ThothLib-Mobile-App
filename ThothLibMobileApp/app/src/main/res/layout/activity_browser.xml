@@ -3,15 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SideBar">
+    tools:context=".Browser">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="0dp">
-
 
         <RelativeLayout
             android:id="@+id/parentRelative"
@@ -20,13 +19,12 @@
             android:background="@color/black_color"
             android:paddingVertical="20sp">
 
-
             <ImageView
                 android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
-                android:src="@mipmap/menu"
-                android:onClick="toglleSideBar"/>
+                android:onClick="toglleSideBar"
+                android:src="@mipmap/menu" />
 
             <ImageView
                 android:layout_width="120dp"
@@ -36,6 +34,19 @@
 
         </RelativeLayout>
 
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/parentRelative">
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragment_pages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </ScrollView>
+
         <LinearLayout
             android:id="@+id/side_bar"
             android:layout_width="360dp"
@@ -43,15 +54,18 @@
             android:layout_marginLeft="-360dp"
             android:background="@color/black_color"
             android:orientation="vertical"
-            android:paddingVertical="15dp">
+            android:paddingVertical="15dp"
+            android:layout_below="@id/parentRelative">
 
             <LinearLayout
+                android:id="@+id/user_perfil"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:paddingHorizontal="15dp"
-                android:paddingVertical="15dp">
+                android:paddingVertical="15dp"
+                android:onClick="chooseFragment">
 
                 <ImageView
                     android:layout_width="50dp"
@@ -70,12 +84,14 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/search_book"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:paddingHorizontal="15dp"
-                android:paddingVertical="15dp">
+                android:paddingVertical="15dp"
+                android:onClick="chooseFragment">
 
                 <ImageView
                     android:layout_width="50dp"
@@ -93,12 +109,14 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/contact_us"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:paddingHorizontal="15dp"
-                android:paddingVertical="15dp">
+                android:paddingVertical="15dp"
+                android:onClick="chooseFragment">
 
                 <ImageView
                     android:layout_width="50dp"
@@ -116,12 +134,14 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/questions"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:paddingHorizontal="15dp"
-                android:paddingVertical="15dp">
+                android:paddingVertical="15dp"
+                android:onClick="chooseFragment">
 
                 <ImageView
                     android:layout_width="50dp"
@@ -139,12 +159,14 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/list_user"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:paddingHorizontal="15dp"
-                android:paddingVertical="15dp">
+                android:paddingVertical="15dp"
+                android:onClick="chooseFragment">
 
                 <ImageView
                     android:layout_width="50dp"
@@ -162,12 +184,14 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/add_book"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:paddingHorizontal="15dp"
-                android:paddingVertical="15dp">
+                android:paddingVertical="15dp"
+                android:onClick="chooseFragment">
 
                 <ImageView
                     android:layout_width="50dp"
@@ -179,6 +203,31 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
                     android:text="@string/menu_add_book"
+                    android:textColor="@color/white"
+                    android:textSize="25sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/info_livro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="15dp"
+                android:onClick="chooseFragment">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@mipmap/menu_add_book" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="Tela do livro"
                     android:textColor="@color/white"
                     android:textSize="25sp" />
 
@@ -212,13 +261,9 @@
                         android:textSize="25sp" />
 
                 </LinearLayout>
-
-
             </LinearLayout>
-
         </LinearLayout>
-
-    </LinearLayout>
+    </RelativeLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
