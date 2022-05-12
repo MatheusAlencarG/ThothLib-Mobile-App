@@ -1,34 +1,45 @@
 package thothlib.mobile.thothlib_mobile_app
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import com.squareup.picasso.Picasso
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class UserPerfil : AppCompatActivity() {
+class UserPerfilFragment : Fragment() {
 
-    lateinit var sideBar: LinearLayout;
     lateinit var tvNome: TextView
     lateinit var tvCpf: TextView
     lateinit var tvEmail: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_user_perfil)
+    }
 
-        sideBar = findViewById(R.id.side_bar);
-        tvNome = findViewById(R.id.tv_user_name)
-        tvCpf = findViewById(R.id.tv_user_cpf)
-        tvEmail = findViewById(R.id.tv_user_email)
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout for this fragment
+        val view = inflater.inflate(R.layout.fragment_user_perfil, container, false)
+
+        tvNome = view.findViewById(R.id.tv_user_name)
+        tvCpf = view.findViewById(R.id.tv_user_cpf)
+        tvEmail = view.findViewById(R.id.tv_user_email)
 
         consultarUsuario()
         renderBookCards()
+
+        return view
     }
 
     fun consultarUsuario() {
@@ -46,40 +57,28 @@ class UserPerfil : AppCompatActivity() {
                     tvCpf.text = "${usuario?.cpf}"
                     tvEmail.text = "${usuario?.email}"
                 } else {
-                    Toast.makeText(baseContext, "Não encontrado", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, "Não encontrado", Toast.LENGTH_SHORT).show()
                 }
                 println("${response} response")
             }
             override fun onFailure(call: Call<User>, t: Throwable) {
-                Toast.makeText(baseContext, "Erro na API ${t.message}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Erro na API ${t.message}", Toast.LENGTH_SHORT).show()
             }
         })
     }
 
     fun renderBookCards() {
-        val transaction = supportFragmentManager.beginTransaction()
+        val transaction = (this.context as AppCompatActivity).supportFragmentManager.beginTransaction()
+
         var i = 3
 
         while (i >= 0) {
-            Toast.makeText(this, "uashduash", Toast.LENGTH_SHORT).show()
+            Toast.makeText(activity, "uashduash", Toast.LENGTH_SHORT).show()
 
             transaction.add(R.id.ll_book_card, BookCardFragment::class.java, null)
             --i
         }
 
         transaction.commit()
-    }
-
-    fun toglleSideBar(V: View) {
-        val sideBarParam = sideBar.layoutParams as ViewGroup.MarginLayoutParams;
-
-
-        if (sideBarParam.leftMargin == 0) {
-            sideBarParam.setMargins(-990,0,0,0);
-            sideBar.layoutParams = sideBarParam
-        } else {
-            sideBarParam.setMargins(0,0,0,0);
-            sideBar.layoutParams = sideBarParam
-        }
     }
 }

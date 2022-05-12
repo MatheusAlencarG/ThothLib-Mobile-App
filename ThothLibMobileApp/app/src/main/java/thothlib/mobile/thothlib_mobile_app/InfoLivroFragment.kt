@@ -1,15 +1,17 @@
 package thothlib.mobile.thothlib_mobile_app
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class InfoLivro : AppCompatActivity() {
+class InfoLivroFragment : Fragment() {
 
     lateinit var tvAutor: TextView
     lateinit var tvPrateleira: TextView
@@ -19,26 +21,23 @@ class InfoLivro : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_info_livro)
-
-        tvAutor = findViewById(R.id.tv_autor)
-        tvPrateleira = findViewById(R.id.tv_prateleira)
-        tvDataPubli = findViewById(R.id.tv_data_public)
-        tvAvaliacao = findViewById(R.id.tv_avaliacao)
-        tvDescricao = findViewById(R.id.tv_description)
-
-        consultarLivro();
     }
 
-    fun teste(v: View){
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        val view = inflater.inflate(R.layout.fragment_info_livro, container, false)
 
-        val id = 2
+        tvAutor = view.findViewById(R.id.tv_autor)
+        tvPrateleira = view.findViewById(R.id.tv_prateleira)
+        tvDataPubli = view.findViewById(R.id.tv_data_public)
+        tvAvaliacao = view.findViewById(R.id.tv_avaliacao)
+        tvDescricao = view.findViewById(R.id.tv_description)
 
-        // objeto do endpoint de GET /filmes/{id}
-        val getLivro = ThothLibs.criar("biblioteca").getLivro(id)
+        consultarLivro();
 
-        tvAutor.text = "Mudou"
-
+        return view
     }
 
     fun consultarLivro() {
@@ -58,12 +57,12 @@ class InfoLivro : AppCompatActivity() {
                     tvAvaliacao.text = "10/10"
                     tvDescricao.text = "${livro?.descricao}"
                 } else {
-                    Toast.makeText(baseContext, "Não encontrado", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, "Não encontrado", Toast.LENGTH_SHORT).show()
                 }
             }
 
             override fun onFailure(call: Call<Livro>, t: Throwable) {
-                Toast.makeText(baseContext, "Erro na API ${t.message}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Erro na API ${t.message}", Toast.LENGTH_SHORT).show()
             }
         })
     }
