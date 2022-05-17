@@ -13,4 +13,6 @@
     <color name="ligth_grey">#737373</color>
     <color name="dark_blue">#04378F</color>
     <color name="white">#ffffff</color>
+    <color name="green">#58FD1E</color>
+    <color name="red">#D41414</color>
 </resources>

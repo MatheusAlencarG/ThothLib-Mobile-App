@@ -1,4 +1,4 @@
-package thothlib.mobile.thothlib_mobile_app
+package thothlib.mobile.thothlib_mobile_app.activitys
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -10,6 +10,10 @@ import android.widget.Toast
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import thothlib.mobile.thothlib_mobile_app.Browser
+import thothlib.mobile.thothlib_mobile_app.MainActivity
+import thothlib.mobile.thothlib_mobile_app.R
+import thothlib.mobile.thothlib_mobile_app.services.ThothLibs
 
 class Login : AppCompatActivity() {
 
@@ -30,7 +34,7 @@ class Login : AppCompatActivity() {
         val email = etEmail.text.toString()
         val senha = etSenha.text.toString()
 
-        val getAutentication = ThothLibs.criar("autenticacao").autentication(email, senha)
+        val getAutentication = ThothLibs.criar().autentication(email, senha)
 
         getAutentication.enqueue(object : Callback<Void> {
             override fun onResponse(call: Call<Void>, response: Response<Void>) {

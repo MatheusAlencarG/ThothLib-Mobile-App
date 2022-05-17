@@ -1,4 +1,4 @@
-package thothlib.mobile.thothlib_mobile_app
+package thothlib.mobile.thothlib_mobile_app.infoClass
 
 data class ReservedBooks (
     val id: Int,
