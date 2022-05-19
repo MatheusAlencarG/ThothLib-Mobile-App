@@ -16,7 +16,7 @@
             android:name=".InfoLivro"
             android:exported="false" />
         <activity
-            android:name=".DevolucaoSucesso"
+            android:name=".activitys.DevolucaoSucesso"
             android:exported="false" />
         <activity
             android:name=".activitys.DevolucaoErro"
