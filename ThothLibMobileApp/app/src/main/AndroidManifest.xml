@@ -15,7 +15,7 @@
 
         <activity
             android:name=".DevolucaoSucesso"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".DevolucaoErro"
             android:exported="false" />
