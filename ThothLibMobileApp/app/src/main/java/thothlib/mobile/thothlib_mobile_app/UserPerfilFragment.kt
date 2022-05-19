@@ -1,5 +1,8 @@
 package thothlib.mobile.thothlib_mobile_app
 
+import android.app.Activity
+import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,7 +11,6 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.squareup.picasso.Picasso
 import retrofit2.Call
@@ -20,6 +22,7 @@ class UserPerfilFragment : Fragment() {
     lateinit var tvNome: TextView
     lateinit var tvCpf: TextView
     lateinit var tvEmail: TextView
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
