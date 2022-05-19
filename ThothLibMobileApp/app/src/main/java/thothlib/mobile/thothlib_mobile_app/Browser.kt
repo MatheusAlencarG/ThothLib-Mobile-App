@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
+import thothlib.mobile.thothlib_mobile_app.fragments.*
 
 class Browser : AppCompatActivity() {
 
@@ -19,6 +20,8 @@ class Browser : AppCompatActivity() {
         val trasaction = supportFragmentManager.beginTransaction()
         trasaction.replace(R.id.fragment_pages, UserPerfilFragment::class.java, null)
         trasaction.commit()
+
+        setColorOnSideBar(findViewById(R.id.user_perfil))
     }
 
     fun toglleSideBar(V: View?) {
@@ -44,6 +47,28 @@ class Browser : AppCompatActivity() {
             R.id.add_book -> addBookFragment()
             R.id.info_livro -> infoBookFragment()
         }
+        setColorOnSideBar(element)
+    }
+
+    fun setColorOnSideBar(element: View) {
+        val listIds: ArrayList<Int> = arrayListOf(
+            R.id.user_perfil,
+            R.id.search_book,
+            R.id.contact_us,
+            R.id.questions,
+            R.id.list_user,
+            R.id.add_book,
+            R.id.info_livro
+        )
+        val boxElement = findViewById<LinearLayout>(element.id)
+
+        listIds.forEach { elementId ->
+            if (element.id != elementId) {
+                findViewById<LinearLayout>(elementId).setBackgroundColor(getColor(R.color.black_color))
+            }
+        }
+
+        boxElement.setBackgroundColor(getColor(R.color.ligth_blue_color))
     }
 
     fun userPerfilFragment() {

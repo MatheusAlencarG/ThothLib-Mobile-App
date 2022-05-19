@@ -1,4 +1,4 @@
-package thothlib.mobile.thothlib_mobile_app
+package thothlib.mobile.thothlib_mobile_app.activitys
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -10,6 +10,9 @@ import android.widget.Toast
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import thothlib.mobile.thothlib_mobile_app.R
+import thothlib.mobile.thothlib_mobile_app.infoClass.NewUser
+import thothlib.mobile.thothlib_mobile_app.services.ThothLibs
 
 class Register : AppCompatActivity() {
 
@@ -42,7 +45,7 @@ class Register : AppCompatActivity() {
         )
 
 
-        val postUser = ThothLibs.criar("").registerUser(newUser)
+        val postUser = ThothLibs.criar().registerUser(newUser)
         // Toast.makeText(baseContext, "${newUser}${postUser.request()}", Toast.LENGTH_SHORT).show()
 
         postUser.enqueue(object : Callback<Void> {

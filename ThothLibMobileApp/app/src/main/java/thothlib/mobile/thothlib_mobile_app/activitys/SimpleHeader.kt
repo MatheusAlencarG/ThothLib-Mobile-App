@@ -1,9 +1,8 @@
-package thothlib.mobile.thothlib_mobile_app
+package thothlib.mobile.thothlib_mobile_app.activitys
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
+import thothlib.mobile.thothlib_mobile_app.R
 
 class SimpleHeader : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

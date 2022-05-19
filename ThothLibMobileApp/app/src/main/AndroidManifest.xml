@@ -16,22 +16,22 @@
             android:name=".InfoLivro"
             android:exported="false" />
         <activity
-            android:name=".DevolucaoSucesso"
+            android:name=".activitys.DevolucaoSucesso"
             android:exported="false" />
         <activity
-            android:name=".DevolucaoErro"
+            android:name=".activitys.DevolucaoErro"
             android:exported="false" />
         <activity
             android:name=".Browser"
             android:exported="false" />
         <activity
-            android:name=".Login"
+            android:name=".activitys.Login"
             android:exported="false" />
         <activity
-            android:name=".SimpleHeader"
+            android:name=".activitys.SimpleHeader"
             android:exported="false" />
         <activity
-            android:name=".Register"
+            android:name=".activitys.Register"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
