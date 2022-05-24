@@ -1,6 +1,5 @@
-package thothlib.mobile.thothlib_mobile_app
+package thothlib.mobile.thothlib_mobile_app.fragments
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,6 +10,9 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import retrofit2.Call
 import retrofit2.Response
+import thothlib.mobile.thothlib_mobile_app.infoClass.AddNewBook
+import thothlib.mobile.thothlib_mobile_app.R
+import thothlib.mobile.thothlib_mobile_app.services.ThothLibs
 
 class AddBookFragment : Fragment() {
 
@@ -57,7 +59,7 @@ class AddBookFragment : Fragment() {
             etTitulo.text.toString()
         )
 
-        val postLivro = ThothLibs.criar("biblioteca").postBook(2, novoLivro)
+        val postLivro = ThothLibs.criar().postBook(2, novoLivro)
 
         postLivro.enqueue(object : retrofit2.Callback<Void> {
             override fun onResponse(call: Call<Void>, response: Response<Void>) {

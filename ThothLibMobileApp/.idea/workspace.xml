@@ -31,13 +31,14 @@
       <change beforePath="$PROJECT_DIR$/app/src/main/java/thothlib/mobile/thothlib_mobile_app/UserPerfilFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/thothlib/mobile/thothlib_mobile_app/UserPerfilFragment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_devolucao_sucesso.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_devolucao_sucesso.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_user_perfil.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_user_perfil.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/user_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/user_item.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\lucas.pereira\.android\avd\Pixel_XL_API_23.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\malen\.android\avd\Pixel_XL_API_23.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -74,11 +75,20 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="layoutResourceFile" />
         <option value="resourceFile" />
+        <option value="Class" />
+        <option value="Kotlin Class" />
+        <option value="valueResourceFile" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="GitSEFilterConfiguration">
@@ -102,8 +112,9 @@
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="cidr.known.project.marker" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../tutorial-fragments-master/tutorial-fragments-master" />
+    <property name="project.structure.last.edited" value="SDK Location" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -112,6 +123,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\malen\OneDrive\Documentos\ThothLibMobileApp\ThothLibMobileApp\app\src\main\res\mipmap-mdpi" />
       <recent name="C:\Users\malen\OneDrive\Documentos\ThothLibMobileApp\ThothLibMobileApp\app\src\main\java\thothlib\mobile\thothlib_mobile_app\backup" />
       <recent name="C:\Users\malen\OneDrive\Documentos\ThothLibMobileApp\ThothLibMobileApp\app\src\main\res\layout\backup" />
     </key>
@@ -121,6 +133,10 @@
       <recent name="C:\Users\malen\OneDrive\Documentos\ThothLibMobileApp\ThothLibMobileApp\app\src\main\res\layout\fragments" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="thothlib.mobile.thothlib_mobile_app.activitys" />
+      <recent name="thothlib.mobile.thothlib_mobile_app.services" />
+      <recent name="thothlib.mobile.thothlib_mobile_app.infoClass" />
+      <recent name="thothlib.mobile.thothlib_mobile_app.fragments" />
       <recent name="thothlib.mobile.thothlib_mobile_app.backup" />
     </key>
     <key name="android.template.122854500">

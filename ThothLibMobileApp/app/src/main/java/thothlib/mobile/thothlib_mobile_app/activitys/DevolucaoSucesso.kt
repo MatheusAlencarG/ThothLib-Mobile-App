@@ -1,4 +1,4 @@
-package thothlib.mobile.thothlib_mobile_app
+package thothlib.mobile.thothlib_mobile_app.activitys
 
 import android.app.Activity
 import android.content.Intent
@@ -11,6 +11,7 @@ import android.widget.Button
 import android.widget.Toast
 import com.google.zxing.integration.android.IntentIntegrator
 
+import thothlib.mobile.thothlib_mobile_app.R
 
 class DevolucaoSucesso : AppCompatActivity() {
 

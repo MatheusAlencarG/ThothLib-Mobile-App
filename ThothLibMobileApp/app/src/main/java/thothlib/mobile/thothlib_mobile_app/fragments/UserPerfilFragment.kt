@@ -1,4 +1,4 @@
-package thothlib.mobile.thothlib_mobile_app
+package thothlib.mobile.thothlib_mobile_app.fragments
 
 import android.app.Activity
 import android.content.Intent
@@ -7,15 +7,15 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.squareup.picasso.Picasso
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import thothlib.mobile.thothlib_mobile_app.R
+import thothlib.mobile.thothlib_mobile_app.services.ThothLibs
+import thothlib.mobile.thothlib_mobile_app.infoClass.User
 
 class UserPerfilFragment : Fragment() {
 
@@ -49,7 +49,7 @@ class UserPerfilFragment : Fragment() {
         // id do luis
         val id = 2
 
-        val getUsuario = ThothLibs.criar("usuario").getUsuario(id)
+        val getUsuario = ThothLibs.criar().getUsuario(id)
 
         // Callback do pacote retrofit2
         getUsuario.enqueue(object : Callback<User> {
@@ -60,7 +60,7 @@ class UserPerfilFragment : Fragment() {
                     tvCpf.text = "${usuario?.cpf}"
                     tvEmail.text = "${usuario?.email}"
                 } else {
-                    Toast.makeText(context, "Não encontrado", Toast.LENGTH_SHORT).show()
+//                    Toast.makeText (context, "Não encontrado", Toast.LENGTH_SHORT).show()
                 }
                 println("${response} response")
             }
@@ -76,7 +76,7 @@ class UserPerfilFragment : Fragment() {
         var i = 3
 
         while (i >= 0) {
-            Toast.makeText(activity, "uashduash", Toast.LENGTH_SHORT).show()
+//            Toast.makeText(activity, "uashduash", Toast.LENGTH_SHORT).show()
 
             transaction.add(R.id.ll_book_card, BookCardFragment::class.java, null)
             --i

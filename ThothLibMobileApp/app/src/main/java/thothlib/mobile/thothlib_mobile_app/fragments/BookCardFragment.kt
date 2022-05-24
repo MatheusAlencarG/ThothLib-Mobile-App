@@ -1,10 +1,11 @@
-package thothlib.mobile.thothlib_mobile_app
+package thothlib.mobile.thothlib_mobile_app.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import thothlib.mobile.thothlib_mobile_app.R
 
 class BookCardFragment : Fragment() {
 

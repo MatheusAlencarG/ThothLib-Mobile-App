@@ -1,4 +1,4 @@
-package thothlib.mobile.thothlib_mobile_app
+package thothlib.mobile.thothlib_mobile_app.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,6 +10,9 @@ import androidx.fragment.app.Fragment
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import thothlib.mobile.thothlib_mobile_app.infoClass.Livro
+import thothlib.mobile.thothlib_mobile_app.R
+import thothlib.mobile.thothlib_mobile_app.services.ThothLibs
 
 class InfoLivroFragment : Fragment() {
 
@@ -44,7 +47,7 @@ class InfoLivroFragment : Fragment() {
         val id = 2
 
         // objeto do endpoint de GET /filmes/{id}
-        val getLivro = ThothLibs.criar("biblioteca").getLivro(id)
+        val getLivro = ThothLibs.criar().getLivro(id)
 
         // Callback do pacote retrofit2
         getLivro.enqueue(object : Callback<Livro> {
