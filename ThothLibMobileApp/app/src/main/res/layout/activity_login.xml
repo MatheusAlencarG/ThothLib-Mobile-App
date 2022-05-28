@@ -11,20 +11,18 @@
 
         <include
             android:id="@+id/header"
-            layout="@layout/activity_simple_header"
-            />
+            layout="@layout/activity_simple_header" />
 
         <TextView
             android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/login_title"
-            android:textColor="@color/ligth_blue_color"
             android:layout_below="@+id/header"
-            android:textAlignment="center"
-            android:textSize="40sp"
             android:layout_marginTop="50dp"
-            />
+            android:text="@string/login_title"
+            android:textAlignment="center"
+            android:textColor="@color/ligth_blue_color"
+            android:textSize="40sp" />
 
         <TextView
             android:id="@+id/description"
