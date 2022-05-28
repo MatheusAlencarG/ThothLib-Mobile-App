@@ -52,6 +52,17 @@
     <string name="fake_prateleira">Z5</string>
     <string name="fake_data">10/08/2020</string>
     <string name="fake_avaliacao">10/10</string>
+    <string name="fake_book_name">Programando com Javascript</string>
+    <string name="fake_label_reserved_book">Livro reservado:</string>
+    <string name="fake_active">Ativo</string>
+    <string name="fake_label_status">Status:</string>
+    <string name="fake_email">usuário@bandtec.com.br:</string>
+    <string name="fake_label_email">Email:</string>
+    <string name="fake_label_when_reserved">Reservado em:</string>
+    <string name="fake_label_when_give_back">Devolver em:</string>
+    <string name="send_email_button">Enviar email</string>
+    <string name="extend_button">Prorrogar</string>
+    <string name="fake_user_name">Usuário 03</string>
     <string name="btn_reserva">RESERVAR</string>
     <string name="btn_retirar">RETIRAR</string>
     <string name="btn_renovar">RENOVAR</string>
@@ -78,6 +89,7 @@
     <string name="book_card_fragment_title">Programando com javaScript</string>
     <string name="book_card_fragment_date">Devolver até:</string>
     <string name="book_card_fragment_reserve">Ver reserva</string>
+    <string name="status_user_inactive">Inativo</string>
 
 
 </resources>

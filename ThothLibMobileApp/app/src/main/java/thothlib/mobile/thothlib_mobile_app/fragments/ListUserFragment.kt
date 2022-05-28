@@ -5,8 +5,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.appcompat.widget.AppCompatTextView
+import androidx.appcompat.widget.LinearLayoutCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -16,6 +18,8 @@ import retrofit2.Response
 import thothlib.mobile.thothlib_mobile_app.R
 import thothlib.mobile.thothlib_mobile_app.infoClass.Studant
 import thothlib.mobile.thothlib_mobile_app.services.ThothLibs
+import java.lang.ClassCastException
+
 
 class ListUserFragment : Fragment() {
 
@@ -39,7 +43,10 @@ class ListUserFragment : Fragment() {
         val getStudants = ThothLibs.criar().getStudants()
 
         getStudants.enqueue(object : Callback<Array<Studant>> {
-            override fun onResponse(call: Call<Array<Studant>>, response: Response<Array<Studant>>) {
+            override fun onResponse(
+                call: Call<Array<Studant>>,
+                response: Response<Array<Studant>>
+            ) {
                 if (response.isSuccessful) {
                     val body = response.body()
 
@@ -98,20 +105,37 @@ class ListUserFragment : Fragment() {
                 userStudant[position].qtdReservadosAgora
             )
             viewHolder.bind(studant)
-            viewHolder.itemView.setOnClickListener {
-                listener.onSelected(studant)
-            }
+            viewHolder.itemView.findViewById<LinearLayout>(R.id.user_content_show_more)
+                .setOnClickListener {
+                    listener.onSelected(studant)
+                }
         }
 
         override fun getItemCount() = userStudant.size
 
     }
 
-    internal inner class ViewHolder constructor(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+
+        if (context is OnListSelected) {
+            listener = context
+        } else {
+            throw ClassCastException("$context must implemented")
+        }
+    }
+
+    internal inner class ViewHolder constructor(itemView: View) :
+        RecyclerView.ViewHolder(itemView) {
         fun bind(studant: Studant) {
             itemView.findViewById<AppCompatTextView>(R.id.user_content_name).text = studant.nome
             itemView.findViewById<AppCompatTextView>(R.id.user_content_email).text = studant.email
             itemView.findViewById<AppCompatTextView>(R.id.user_content_date).text = studant.dataInativacao
+            if (!studant.statusAtivo) {
+                itemView.findViewById<LinearLayoutCompat>(R.id.user_content_is_active).rootView.setBackgroundColor(
+                    resources.getColor(R.color.red)
+                )
+            }
         }
     }
 

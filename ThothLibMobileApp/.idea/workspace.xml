@@ -5,12 +5,38 @@
       <config />
     </shared>
   </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0653f202-7b06-4bd7-88a6-c1a4154c7eed" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/thothlib/mobile/thothlib_mobile_app/popup/BookDetailPopupFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/thothlib/mobile/thothlib_mobile_app/popup/ConfirmReservationPopupFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/thothlib/mobile/thothlib_mobile_app/popup/ExtendBookConfirmationPopupFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/thothlib/mobile/thothlib_mobile_app/popup/ExtendBookPopupFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/thothlib/mobile/thothlib_mobile_app/popup/ReservationSuccessfullyPopupFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/thothlib/mobile/thothlib_mobile_app/popup/UserPopupFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/background_popup.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_book_detail_popup.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_confirm_reservation_popup.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_extend_book_confirmation_popup.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_extend_book_popup.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_reservation_successfully_popup.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_user_popup.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/close.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/thothlib/mobile/thothlib_mobile_app/Browser.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/thothlib/mobile/thothlib_mobile_app/Browser.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/thothlib/mobile/thothlib_mobile_app/fragments/ListUserFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/thothlib/mobile/thothlib_mobile_app/fragments/ListUserFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/thothlib/mobile/thothlib_mobile_app/services/ThothLibs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/thothlib/mobile/thothlib_mobile_app/services/ThothLibs.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_browser.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_browser.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_list_user.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_list_user.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_user_perfil.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_user_perfil.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +44,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\lucas.pereira\.android\avd\Pixel_XL_API_23.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[v4civkscprpjm7vw]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -55,10 +82,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="layoutResourceFile" />
-        <option value="resourceFile" />
         <option value="Class" />
         <option value="Kotlin Class" />
         <option value="valueResourceFile" />
+        <option value="resourceFile" />
       </list>
     </option>
   </component>
@@ -92,7 +119,6 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/AppMemorias/AppMemorias" />
     <property name="project.structure.last.edited" value="SDK Location" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -107,16 +133,17 @@
       <recent name="C:\Users\malen\OneDrive\Documentos\ThothLibMobileApp\ThothLibMobileApp\app\src\main\res\layout\backup" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\malen\OneDrive\Documentos\ThothLibMobileApp\ThothLibMobileApp\app\src\main\res\mipmap-xxxhdpi" />
       <recent name="C:\Users\malen\OneDrive\Documentos\ThothLibMobileApp\ThothLibMobileApp\app\src\main\res\layout\backup" />
       <recent name="C:\Users\malen\OneDrive\Documentos\ThothLibMobileApp\ThothLibMobileApp\app\src\main\res\layout" />
       <recent name="C:\Users\malen\OneDrive\Documentos\ThothLibMobileApp\ThothLibMobileApp\app\src\main\res\layout\fragments" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="thothlib.mobile.thothlib_mobile_app.popup" />
       <recent name="thothlib.mobile.thothlib_mobile_app.activitys" />
       <recent name="thothlib.mobile.thothlib_mobile_app.services" />
       <recent name="thothlib.mobile.thothlib_mobile_app.infoClass" />
       <recent name="thothlib.mobile.thothlib_mobile_app.fragments" />
-      <recent name="thothlib.mobile.thothlib_mobile_app.backup" />
     </key>
     <key name="android.template.122854500">
       <recent name="thothlib.mobile.thothlib_mobile_app" />
@@ -294,5 +321,15 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="ThothLibMobileApp.ThothLib-Mobile-App.app">
+        <watch expression="view.findViewById&lt;ImageView&gt;(R.id.close_popup)" language="kotlin" />
+        <watch expression="view.findViewById&lt;FragmentContainerView&gt;(R.id.user_detail_container)" language="kotlin" custom="import androidx.fragment.app.FragmentContainerView" />
+        <watch expression="requireActivity()" language="kotlin" custom="import android.widget.FrameLayout" />
+        <watch expression="(view as ViewGroup).children.iterator().next().findViewById&lt;ImageView&gt;(R.id.close_popup)" language="kotlin" custom="import androidx.core.view.children" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
