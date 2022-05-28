@@ -17,9 +17,9 @@
             android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingHorizontal="20dp"
             android:text="@string/register_user"
             android:textAlignment="center"
-            android:paddingHorizontal="20dp"
             android:textColor="@color/ligth_blue_color"
             android:textSize="40sp" />
 
@@ -49,10 +49,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
                     android:layout_marginTop="30dp"
-                    android:paddingHorizontal="10dp"
-                    android:paddingVertical="10dp"
+                    android:background="@drawable/border_blue"
                     android:backgroundTint="@color/dark_blue"
-                    android:background="@drawable/border_blue">
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="10dp">
 
                     <ImageView
                         android:layout_width="30dp"
@@ -73,7 +73,7 @@
                     android:id="@+id/user_recycler_view"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    tools:listitem="@layout/user_item"/>
+                    tools:listitem="@layout/user_item" />
 
             </ScrollView>
         </LinearLayout>
