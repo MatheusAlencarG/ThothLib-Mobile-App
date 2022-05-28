@@ -81,6 +81,14 @@
     <string name="usuario_nivel">Usuário Nível</string>
     <string name="register_user">Usuários cadastrados</string>
     <string name="pendence">Pendência: </string>
+    <string name="faq_question">Como faço para reservar um livro?</string>
+    <string name="faq_question2">Qual o prazo de devolução dos livros?</string>
+    <string name="faq_question3">Como devolver o livro?</string>
+    <string name="faq_question4">Como encontrar o livro que eu quero?</string>
+    <string name="faq_answer">Escolha o livro desejado e vá até a biblioteca desejada, após isso assinale a reserva do livro</string>
+    <string name="faq_answer2">Após a reserva, há a opção de solicitar uma prorrogação no prazo. Mas por padrão, os livros tem o prazo de dez dias após a retirada</string>
+    <string name="faq_answer3">Após acabar o tempo de reserva, você deve ir na biblioteca indicada para devolver o livro e marcar a devolução no App</string>
+    <string name="faq_answer4">No aplicativo está indicado o local onde está o livro</string>
 
     <!--  Strings do Kotlin  -->
     <string name="auth_response">E-mail ou senha incorreto</string>
