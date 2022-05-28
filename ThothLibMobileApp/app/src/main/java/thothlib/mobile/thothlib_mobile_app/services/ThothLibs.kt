@@ -31,7 +31,7 @@ interface ThothLibs {
 
     companion object {
 
-        var BASE_URL = "http://18.214.213.57:8080/"
+        var BASE_URL = "http://18.214.213.57:8090/"
 
         fun criar() : ThothLibs {
             val retrofit = Retrofit.Builder()

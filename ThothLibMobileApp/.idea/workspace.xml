@@ -5,6 +5,9 @@
       <config />
     </shared>
   </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
@@ -17,6 +20,15 @@
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_list_user.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_list_user.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_seach_book.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_seach_book.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/border_radius_black.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/border_radius_black_white.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_add_24.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/thothlib/mobile/thothlib_mobile_app/fragments/QuestionFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/thothlib/mobile/thothlib_mobile_app/fragments/QuestionFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_question.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_question.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,6 +37,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[0cc133c70412]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[v4civkscprpjm7vw]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -61,11 +74,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="resourceFile" />
+        <option value="layoutResourceFile" />
         <option value="Class" />
         <option value="Kotlin Class" />
         <option value="valueResourceFile" />
-        <option value="layoutResourceFile" />
+        <option value="resourceFile" />
       </list>
     </option>
   </component>
@@ -99,7 +112,6 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="SDK Location" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -115,16 +127,17 @@
       <recent name="C:\Users\malen\OneDrive\Documentos\ThothLibMobileApp\ThothLibMobileApp\app\src\main\res\layout\backup" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\malen\OneDrive\Documentos\ThothLibMobileApp\ThothLibMobileApp\app\src\main\res\mipmap-xxxhdpi" />
       <recent name="C:\Users\malen\OneDrive\Documentos\ThothLibMobileApp\ThothLibMobileApp\app\src\main\res\layout\backup" />
       <recent name="C:\Users\malen\OneDrive\Documentos\ThothLibMobileApp\ThothLibMobileApp\app\src\main\res\layout" />
       <recent name="C:\Users\malen\OneDrive\Documentos\ThothLibMobileApp\ThothLibMobileApp\app\src\main\res\layout\fragments" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="thothlib.mobile.thothlib_mobile_app.popup" />
       <recent name="thothlib.mobile.thothlib_mobile_app.activitys" />
       <recent name="thothlib.mobile.thothlib_mobile_app.services" />
       <recent name="thothlib.mobile.thothlib_mobile_app.infoClass" />
       <recent name="thothlib.mobile.thothlib_mobile_app.fragments" />
-      <recent name="thothlib.mobile.thothlib_mobile_app.backup" />
     </key>
     <key name="android.template.122854500">
       <recent name="thothlib.mobile.thothlib_mobile_app" />
@@ -302,5 +315,15 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="ThothLibMobileApp.ThothLib-Mobile-App.app">
+        <watch expression="view.findViewById&lt;ImageView&gt;(R.id.close_popup)" language="kotlin" />
+        <watch expression="view.findViewById&lt;FragmentContainerView&gt;(R.id.user_detail_container)" language="kotlin" custom="import androidx.fragment.app.FragmentContainerView" />
+        <watch expression="requireActivity()" language="kotlin" custom="import android.widget.FrameLayout" />
+        <watch expression="(view as ViewGroup).children.iterator().next().findViewById&lt;ImageView&gt;(R.id.close_popup)" language="kotlin" custom="import androidx.core.view.children" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

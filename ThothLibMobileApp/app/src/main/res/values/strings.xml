@@ -52,6 +52,17 @@
     <string name="fake_prateleira">Z5</string>
     <string name="fake_data">10/08/2020</string>
     <string name="fake_avaliacao">10/10</string>
+    <string name="fake_book_name">Programando com Javascript</string>
+    <string name="fake_label_reserved_book">Livro reservado:</string>
+    <string name="fake_active">Ativo</string>
+    <string name="fake_label_status">Status:</string>
+    <string name="fake_email">usuário@bandtec.com.br:</string>
+    <string name="fake_label_email">Email:</string>
+    <string name="fake_label_when_reserved">Reservado em:</string>
+    <string name="fake_label_when_give_back">Devolver em:</string>
+    <string name="send_email_button">Enviar email</string>
+    <string name="extend_button">Prorrogar</string>
+    <string name="fake_user_name">Usuário 03</string>
     <string name="btn_reserva">RESERVAR</string>
     <string name="btn_retirar">RETIRAR</string>
     <string name="btn_renovar">RENOVAR</string>
@@ -72,6 +83,14 @@
     <string name="pendence">Pendência: </string>
     <string name="fake_book_search">Java SE 8 Programmer 1</string>
     <string name="fake_book_result">Exibindo 09 resultados para JavaSript</string>
+    <string name="faq_question">Como faço para reservar um livro?</string>
+    <string name="faq_question2">Qual o prazo de devolução dos livros?</string>
+    <string name="faq_question3">Como devolver o livro?</string>
+    <string name="faq_question4">Como encontrar o livro que eu quero?</string>
+    <string name="faq_answer">Escolha o livro desejado e vá até a biblioteca desejada, após isso assinale a reserva do livro</string>
+    <string name="faq_answer2">Após a reserva, há a opção de solicitar uma prorrogação no prazo. Mas por padrão, os livros tem o prazo de dez dias após a retirada</string>
+    <string name="faq_answer3">Após acabar o tempo de reserva, você deve ir na biblioteca indicada para devolver o livro e marcar a devolução no App</string>
+    <string name="faq_answer4">No aplicativo está indicado o local onde está o livro</string>
 
     <!--  Strings do Kotlin  -->
     <string name="auth_response">E-mail ou senha incorreto</string>
@@ -82,6 +101,7 @@
     <string name="book_card_fragment_reserve">Ver reserva</string>
     <string name="book_card_fragment_plus">Ver mais</string>
     <string name="book_search_filtro">Filtrar por: </string>
+    <string name="status_user_inactive">Inativo</string>
 
 
 </resources>

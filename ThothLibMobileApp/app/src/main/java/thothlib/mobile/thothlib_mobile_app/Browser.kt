@@ -5,9 +5,12 @@ import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
+import androidx.fragment.app.Fragment
 import thothlib.mobile.thothlib_mobile_app.fragments.*
+import thothlib.mobile.thothlib_mobile_app.infoClass.Studant
+import thothlib.mobile.thothlib_mobile_app.popup.UserPopupFragment
 
-class Browser : AppCompatActivity() {
+class Browser : AppCompatActivity(), ListUserFragment.OnListSelected {
 
     lateinit var sideBar:LinearLayout;
 
@@ -69,6 +72,26 @@ class Browser : AppCompatActivity() {
         }
 
         boxElement.setBackgroundColor(getColor(R.color.ligth_blue_color))
+    }
+
+    override fun onSelected(studant: Studant) {
+        var args = Bundle()
+        args.putSerializable("userDetail", studant)
+
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.user_detail_container, UserPopupFragment::class.java, args)
+            .addToBackStack(null)
+            .commit()
+
+    }
+
+    fun closePopup(v: Fragment) {
+        supportFragmentManager
+            .beginTransaction()
+            .remove(v)
+            .addToBackStack(null)
+            .commit()
     }
 
     fun userPerfilFragment() {
