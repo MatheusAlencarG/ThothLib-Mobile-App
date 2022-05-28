@@ -81,6 +81,8 @@
     <string name="usuario_nivel">Usuário Nível</string>
     <string name="register_user">Usuários cadastrados</string>
     <string name="pendence">Pendência: </string>
+    <string name="fake_book_search">Java SE 8 Programmer 1</string>
+    <string name="fake_book_result">Exibindo 09 resultados para JavaSript</string>
     <string name="faq_question">Como faço para reservar um livro?</string>
     <string name="faq_question2">Qual o prazo de devolução dos livros?</string>
     <string name="faq_question3">Como devolver o livro?</string>
@@ -97,6 +99,8 @@
     <string name="book_card_fragment_title">Programando com javaScript</string>
     <string name="book_card_fragment_date">Devolver até:</string>
     <string name="book_card_fragment_reserve">Ver reserva</string>
+    <string name="book_card_fragment_plus">Ver mais</string>
+    <string name="book_search_filtro">Filtrar por: </string>
     <string name="status_user_inactive">Inativo</string>
 
 
