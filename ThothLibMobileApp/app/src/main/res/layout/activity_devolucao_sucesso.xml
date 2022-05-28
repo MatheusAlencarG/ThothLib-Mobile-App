@@ -72,6 +72,7 @@
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 app:cornerRadius="14dp" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

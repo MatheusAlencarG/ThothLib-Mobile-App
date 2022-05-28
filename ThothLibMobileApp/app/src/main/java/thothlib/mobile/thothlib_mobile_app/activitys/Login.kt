@@ -15,6 +15,11 @@ import thothlib.mobile.thothlib_mobile_app.MainActivity
 import thothlib.mobile.thothlib_mobile_app.R
 import thothlib.mobile.thothlib_mobile_app.services.ThothLibs
 
+import android.content.SharedPreferences
+
+
+
+
 class Login : AppCompatActivity() {
 
     lateinit var etEmail:EditText
@@ -33,11 +38,25 @@ class Login : AppCompatActivity() {
     fun autentication(v:View) {
         val email = etEmail.text.toString()
         val senha = etSenha.text.toString()
+        var idUser:SharedPreferences
+
 
         val getAutentication = ThothLibs.criar().autentication(email, senha)
 
         getAutentication.enqueue(object : Callback<Void> {
             override fun onResponse(call: Call<Void>, response: Response<Void>) {
+
+                idUser = getSharedPreferences("idUser", MODE_PRIVATE)
+
+                //val id:Int = response.body().toString().toInt()
+                println("response" + response.body())
+
+
+
+                val editor = idUser.edit()
+                editor.putInt("id", 4)
+                editor.commit()
+
                 if (response.isSuccessful) {
                     browsePage(findViewById(R.id.entrar));
                 } else {
