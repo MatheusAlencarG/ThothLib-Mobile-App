@@ -8,8 +8,8 @@
     <LinearLayout
         android:id="@+id/ll_book_card"
         android:orientation="vertical"
-        android:layout_width="350dp"
-        android:layout_height="500dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
         android:background="@drawable/book_card_fragment_border"
@@ -35,6 +35,7 @@
             />
 
         <Button
+            android:id=""
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/book_card_fragment_plus"
