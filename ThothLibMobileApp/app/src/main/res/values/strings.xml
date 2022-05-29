@@ -91,6 +91,23 @@
     <string name="faq_answer2">Após a reserva, há a opção de solicitar uma prorrogação no prazo. Mas por padrão, os livros tem o prazo de dez dias após a retirada</string>
     <string name="faq_answer3">Após acabar o tempo de reserva, você deve ir na biblioteca indicada para devolver o livro e marcar a devolução no App</string>
     <string name="faq_answer4">No aplicativo está indicado o local onde está o livro</string>
+    <string name="fragPopup_prgSucess_title">Prorrogação feita com sucesso!</string>
+    <string name="fragPopup_prgSucess_text">Esperamos que aproveite bem esse tempo extra. \n \n Boa leitura!</string>
+    <string name="fragPopup_prgSucess_btn">Meu perfil</string>
+    <string name="fragPopup_infoBook_title">Programando com javaScript</string>
+    <string name="fragPopup_infoBook_status">Status: </string>
+    <string name="fragPopup_infoBook_status2">Disponível</string>
+    <string name="fragPopup_infoBook_date">Devolver até: </string>
+    <string name="fragPopup_infoBook_date2">25/06/22</string>
+    <string name="fragPopup_infoBook_location">Localização: </string>
+    <string name="fragPopup_infoBook_location2">Prateleira 03</string>
+    <string name="fragPopup_infoBook_btn">Reservar</string>
+    <string name="fragPopup_prgConfirm_text">Gostaria de mais tempo para ler? Você está prestes a prorrogar a data de entrega para o dia:</string>
+    <string name="fragPopup_prgConfirm_date">25/06/22</string>
+    <string name="fragPopup_prgConfirm_text2">Clique no botão abaixo para confirmar a prorrogação de devolução.</string>
+    <string name="fragPopup_prgConfirm_btn">Aceitar</string>
+
+
 
     <!--  Strings do Kotlin  -->
     <string name="auth_response">E-mail ou senha incorreto</string>
