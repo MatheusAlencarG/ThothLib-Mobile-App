@@ -12,7 +12,6 @@ data class ReservedBooks (
     val qtdReservadosAgora: Int,
     val qtdDisponiveis: Int,
     val qtdEstoque: Int,
-    val fkTbBiblioteca: Int,
     val linguagem: String,
     val corEtiqueta: String,
     val qtdReservadosTotal : Int

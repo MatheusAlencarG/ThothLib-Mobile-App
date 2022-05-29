@@ -102,6 +102,7 @@
     <string name="book_card_fragment_plus">Ver mais</string>
     <string name="book_search_filtro">Filtrar por: </string>
     <string name="status_user_inactive">Inativo</string>
+    <string name="leitor_qr_code">Leitor QR Code</string>
 
 
 </resources>

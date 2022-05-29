@@ -3,10 +3,7 @@ package thothlib.mobile.thothlib_mobile_app.services
 import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.http.Body
-import retrofit2.http.GET
-import retrofit2.http.POST
-import retrofit2.http.Path
+import retrofit2.http.*
 import thothlib.mobile.thothlib_mobile_app.infoClass.*
 
 interface ThothLibs {
@@ -28,6 +25,12 @@ interface ThothLibs {
 
     @GET("/aluno/{idUsuario}")
     fun getUsuario(@Path("idUsuario") idUserPerfil:Int) : Call<User>
+
+    @GET("admin/{idAdmin}")
+    fun getAdmin(@Path("idAdmin") idAdmin: Int) : Call<User>
+
+    @DELETE("/autenticacao/{id}")
+    fun logoutUser(@Path("id") id: Int) : Call<Void>
 
     companion object {
 
