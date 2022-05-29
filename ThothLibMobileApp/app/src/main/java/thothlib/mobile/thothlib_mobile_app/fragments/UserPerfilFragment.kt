@@ -36,10 +36,6 @@ class UserPerfilFragment : Fragment() {
 
         id = requireActivity().getSharedPreferences("idUser", AppCompatActivity.MODE_PRIVATE)
 
-        // tentando ler o dado "ultimaMemoria" da SharedPreferences
-        val idUsuario = id.getInt("id", 0)
-        Toast.makeText (context, "id do usuário aqui: ${idUsuario}", Toast.LENGTH_LONG).show()
-
     }
 
     override fun onCreateView(
@@ -61,21 +57,13 @@ class UserPerfilFragment : Fragment() {
 
     fun consultarUsuario() {
 
-        //var id: SharedPreferences
+        val idUsuario = id.getInt("id", 0)
 
-        //id = getSharedPreferences("idUser", AppCompatActivity.MODE_PRIVATE)
+        val getUsuario = ThothLibs.criar().getUsuario(idUsuario)
 
-        //id.getInt("id", null)
-
-
-
-
-        val getUsuario = ThothLibs.criar().getUsuario(19)
-
-        // Callback do pacote retrofit2
         getUsuario.enqueue(object : Callback<User> {
             override fun onResponse(call: Call<User>, response: Response<User>) {
-                if (response.isSuccessful) { // se o status da resposta é 2xx
+                if (response.isSuccessful) {
                     val usuario = response.body()
                     tvNome.text = "${usuario?.nome}"
                     tvCpf.text = "${usuario?.cpf}"
@@ -95,28 +83,6 @@ class UserPerfilFragment : Fragment() {
             }
         })
     }
-
-    fun renderBookCards(idLivro: Livro) {
-        val transaction = (this.context as AppCompatActivity).supportFragmentManager.beginTransaction()
-
-        var i = 3
-
-        while (i >= 0) {
-            Toast.makeText(activity, "idLivro aqui ${idLivro}", Toast.LENGTH_SHORT).show()
-
-            transaction.add(R.id.ll_book_card, BookCardFragment::class.java, null)
-
-            --i
-        }
-
-        transaction.commit()
-    }
-
-
-
-
-
-
 
 
 }
