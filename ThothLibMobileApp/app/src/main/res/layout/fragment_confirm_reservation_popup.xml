@@ -5,10 +5,72 @@
     android:layout_height="match_parent"
     tools:context=".popup.ConfirmReservationPopupFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/close_popup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/close"
+            android:layout_alignParentEnd="true" />
+
+
+        <ImageView
+            android:id="@+id/popupImage"
+            android:layout_width="match_parent"
+            android:layout_marginTop="25dp"
+            android:layout_height="250dp"
+            android:src="@mipmap/img_fake_b"/>
+
+        <TextView
+            android:id="@+id/popupText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/popupImage"
+            android:layout_marginVertical="15dp"
+            android:paddingHorizontal="10dp"
+            android:text="@string/fragPopup_prgConfirm_text"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/popupDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/popupText"
+            android:text="@string/fragPopup_prgConfirm_date"
+            android:textAlignment="center"
+            android:textColor="@color/ligth_blue_color"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/popupText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/popupDate"
+            android:text="@string/fragPopup_prgConfirm_text2"
+            android:textAlignment="center"
+            android:paddingHorizontal="10dp"
+            android:layout_marginVertical="15dp"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+        <Button
+            android:id="@+id/popupBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingHorizontal="50dp"
+            android:backgroundTint="@color/dark_blue"
+            android:paddingVertical="5dp"
+            android:layout_below="@id/popupText2"
+            android:text="@string/fragPopup_prgConfirm_btn"
+            android:textSize="30sp"/>
+
+
+    </RelativeLayout>
+
 
 </FrameLayout>
