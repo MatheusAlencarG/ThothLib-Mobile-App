@@ -13,22 +13,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0653f202-7b06-4bd7-88a6-c1a4154c7eed" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/book_card_item.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_list_user.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_list_user.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_seach_book.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_seach_book.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/border_radius_black.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/border_radius_black_white.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_add_24.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/thothlib/mobile/thothlib_mobile_app/activitys/Login.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/thothlib/mobile/thothlib_mobile_app/activitys/Login.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/thothlib/mobile/thothlib_mobile_app/fragments/UserPerfilFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/thothlib/mobile/thothlib_mobile_app/fragments/UserPerfilFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/thothlib/mobile/thothlib_mobile_app/infoClass/User.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/thothlib/mobile/thothlib_mobile_app/infoClass/User.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/thothlib/mobile/thothlib_mobile_app/services/ThothLibs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/thothlib/mobile/thothlib_mobile_app/services/ThothLibs.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/book_card_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/book_card_item.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/thothlib/mobile/thothlib_mobile_app/fragments/QuestionFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/thothlib/mobile/thothlib_mobile_app/fragments/QuestionFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_question.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_question.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_confirm_reservation_popup.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_confirm_reservation_popup.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_extend_book_confirmation_popup.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_extend_book_confirmation_popup.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_extend_book_popup.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_extend_book_popup.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_reservation_successfully_popup.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_reservation_successfully_popup.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/img_fake_b.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,8 +33,8 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[0cc133c70412]" />
   <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[v4civkscprpjm7vw]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\lucas.pereira\.android\avd\Pixel_XL_API_23.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -74,11 +71,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="layoutResourceFile" />
         <option value="Class" />
         <option value="Kotlin Class" />
         <option value="valueResourceFile" />
         <option value="resourceFile" />
+        <option value="layoutResourceFile" />
       </list>
     </option>
   </component>
@@ -145,7 +142,7 @@
   </component>
   <component name="RunManager" selected="Android App.ThothLibMobileApp.ThothLib-Mobile-App.app">
     <configuration name="ThothLibMobileApp.ThothLib-Mobile-App.app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
-      <module name="ThothLib-Mobile-App.app" />
+      <module name="ThothLibMobileApp.ThothLib-Mobile-App.app" />
       <option name="DEPLOY" value="true" />
       <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
       <option name="DEPLOY_AS_INSTANT" value="false" />

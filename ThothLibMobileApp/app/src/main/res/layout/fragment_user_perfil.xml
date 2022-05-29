@@ -191,13 +191,13 @@
             <LinearLayout
                 android:id="@+id/ll_book_card_box"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="15dp">
 
-                <androidx.fragment.app.FragmentContainerView
-                    android:id="@+id/ll_book_card"
+                <androidx.recyclerview.widget.RecyclerView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    />
+                    android:layout_height="match_parent"
+                    tools:listitem="@layout/book_card_user_item"/>
 
             </LinearLayout>
 

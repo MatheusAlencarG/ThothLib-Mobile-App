@@ -40,24 +40,17 @@ class Login : AppCompatActivity() {
         val senha = etSenha.text.toString()
         var idUser:SharedPreferences
 
-
         val getAutentication = ThothLibs.criar().autentication(email, senha)
 
-        getAutentication.enqueue(object : Callback<Void> {
-            override fun onResponse(call: Call<Void>, response: Response<Void>) {
-
+        getAutentication.enqueue(object : Callback<Int> {
+            override fun onResponse(call: Call<Int>, response: Response<Int>) {
                 idUser = getSharedPreferences("idUser", MODE_PRIVATE)
 
-                //val id:Int = response.body().toString().toInt()
-                println("response" + response.body())
-
-
-
-                val editor = idUser.edit()
-                editor.putInt("id", 4)
-                editor.commit()
-
                 if (response.isSuccessful) {
+                    val editor = idUser.edit()
+                    response.body()?.let { editor.putInt("id", it) }
+                    editor.commit()
+
                     browsePage(findViewById(R.id.entrar));
                 } else {
                     tvAuthResponse.setVisibility(View.VISIBLE)
@@ -65,7 +58,7 @@ class Login : AppCompatActivity() {
                 }
             }
 
-            override fun onFailure(call: Call<Void>, t: Throwable) {
+            override fun onFailure(call: Call<Int>, t: Throwable) {
                 t.printStackTrace()
                 Toast.makeText(baseContext, "Erro na API", Toast.LENGTH_SHORT).show()
                 tvAuthResponse.setVisibility(View.VISIBLE)
