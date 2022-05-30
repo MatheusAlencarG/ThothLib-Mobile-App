@@ -32,6 +32,9 @@ interface ThothLibs {
     @DELETE("/autenticacao/{id}")
     fun logoutUser(@Path("id") id: Int) : Call<Void>
 
+    @PUT("/biblioteca/reservar/{idUsuario}/{tombo}")
+    fun reserveBook(@Path("idUsuario") idUsuario: Int, @Path("tombo") tombo: String) : Call<Void>
+
     companion object {
 
         var BASE_URL = "http://18.214.213.57:8090/"

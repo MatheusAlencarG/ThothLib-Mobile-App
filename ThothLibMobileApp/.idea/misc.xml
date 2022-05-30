@@ -30,6 +30,7 @@
         <entry key="..\:/Users/lucas.pereira/Documents/facul/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout/fragment_list_user.xml" value="0.13958333333333334" />
         <entry key="..\:/Users/lucas.pereira/Documents/facul/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout/fragment_reservation_successfully_popup.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/lucas.pereira/Documents/facul/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout/fragment_user_perfil.xml" value="0.1" />
+        <entry key="..\:/Users/lucas.pereira/Documents/facul/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout/fragment_user_popup.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/malen/OneDrive/Documentos/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/drawable/background_popup.xml" value="0.2703125" />
         <entry key="..\:/Users/malen/OneDrive/Documentos/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/drawable/border_blue.xml" value="0.2890625" />
         <entry key="..\:/Users/malen/OneDrive/Documentos/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/drawable/border_gray.xml" value="0.2890625" />
@@ -40,14 +41,11 @@
         <entry key="..\:/Users/malen/OneDrive/Documentos/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/drawable/radius.xml" value="0.2890625" />
         <entry key="..\:/Users/malen/OneDrive/Documentos/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout-v28/fragment_user_popup.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/malen/OneDrive/Documentos/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout/activity_add_book.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/malen/OneDrive/Documentos/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout/activity_browser.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/malen/OneDrive/Documentos/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout/activity_browser.xml" value="0.26871794871794874" />
         <entry key="..\:/Users/malen/OneDrive/Documentos/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout/activity_contact.xml" value="0.264" />
         <entry key="..\:/Users/malen/OneDrive/Documentos/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout/activity_devolucao_erro.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/malen/OneDrive/Documentos/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout/activity_devolucao_sucesso.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/malen/OneDrive/Documentos/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout/activity_info_livro.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/lucas.pereira/Documents/facul/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout/fragment_user_popup.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/malen/OneDrive/Documentos/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout/activity_browser.xml" value="0.26871794871794874" />
-        <entry key="..\:/Users/lucas.pereira/Documents/facul/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout/fragment_user_popup.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/malen/OneDrive/Documentos/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Users/malen/OneDrive/Documentos/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout/activity_main.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/malen/OneDrive/Documentos/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout/activity_register.xml" value="0.27291666666666664" />
@@ -61,13 +59,18 @@
         <entry key="..\:/Users/malen/OneDrive/Documentos/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout/fragment_book_detail_popup.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/malen/OneDrive/Documentos/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout/fragment_confirm_reservation_popup.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/malen/OneDrive/Documentos/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout/fragment_contact.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/malen/OneDrive/Documentos/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout/fragment_devolution_book_popup.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/malen/OneDrive/Documentos/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout/fragment_devolution_error.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/malen/OneDrive/Documentos/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout/fragment_extend_book.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/malen/OneDrive/Documentos/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout/fragment_extend_book_confirmation_popup.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/malen/OneDrive/Documentos/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout/fragment_extend_book_popup.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/malen/OneDrive/Documentos/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout/fragment_infi_livro.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/malen/OneDrive/Documentos/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout/fragment_info_livro.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/malen/OneDrive/Documentos/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout/fragment_list_user.xml" value="0.264" />
+        <entry key="..\:/Users/malen/OneDrive/Documentos/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout/fragment_q_r_code.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/malen/OneDrive/Documentos/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout/fragment_qr_response_success.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/malen/OneDrive/Documentos/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout/fragment_question.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/malen/OneDrive/Documentos/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout/fragment_reservation_successfully_popup.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/malen/OneDrive/Documentos/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout/fragment_seach_book.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/malen/OneDrive/Documentos/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout/fragment_user_perfil.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/malen/OneDrive/Documentos/ThothLibMobileApp/ThothLibMobileApp/app/src/main/res/layout/fragment_user_popup.xml" value="0.27291666666666664" />

@@ -7,7 +7,7 @@
     <LinearLayout
         android:id="@+id/ll_book_card"
         android:orientation="vertical"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
@@ -37,13 +37,25 @@
         <Button
             android:id="@+id/ll_book_card_button"
             android:layout_marginTop="25dp"
-            android:layout_width="280dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:text="@string/book_card_fragment_reserve"
-            android:textSize="30sp"
+            android:textSize="20sp"
             android:paddingHorizontal="20dp"
             android:paddingVertical="10dp"
             android:backgroundTint="@color/dark_blue"
+            />
+
+        <Button
+            android:id="@+id/ll_book_card_button_withdraw"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_retirar"
+            android:textSize="20sp"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:backgroundTint="@color/dark_blue"
+            android:visibility="invisible"
             />
 
     </LinearLayout>

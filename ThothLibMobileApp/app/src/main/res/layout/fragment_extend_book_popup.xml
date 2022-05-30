@@ -3,12 +3,62 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="popup.ExtendBookPopupFragment">
+    tools:context="popups.ExtendBookPopupFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/close_popup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/close"
+            android:layout_alignParentEnd="true" />
+
+
+        <TextView
+            android:id="@+id/popupTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:layout_marginBottom="30dp"
+            android:text="@string/fragPopup_prgSucess_title"
+            android:textAlignment="center"
+            android:textColor="@color/ligth_blue_color"
+            android:textSize="35sp" />
+
+        <ImageView
+            android:id="@+id/popupImage"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:src="@mipmap/img_fake_b"
+            android:layout_below="@id/popupTitle" />
+
+        <TextView
+            android:id="@+id/popupText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/popupImage"
+            android:text="@string/fragPopup_prgSucess_text"
+            android:textAlignment="center"
+            android:paddingHorizontal="15dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginBottom="25dp"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingHorizontal="50dp"
+            android:backgroundTint="@color/dark_blue"
+            android:paddingVertical="5dp"
+            android:layout_below="@id/popupText"
+            android:text="@string/fragPopup_prgSucess_btn"
+            android:textSize="30sp"/>
+
+    </RelativeLayout>
 
 </FrameLayout>

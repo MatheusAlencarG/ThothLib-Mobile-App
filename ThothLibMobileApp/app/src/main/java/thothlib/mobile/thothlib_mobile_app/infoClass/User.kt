@@ -11,5 +11,5 @@ data class User (
     val qtdLivrosLidos: Int,
     val qtdResenhas: Int,
     val livrosReservados: Int,
-    val livrosLidos: List<ReservedBooks>,
+    val livrosLidos: List<ReservedBook>,
 )

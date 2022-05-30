@@ -15,14 +15,15 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import thothlib.mobile.thothlib_mobile_app.activitys.Login
-import thothlib.mobile.thothlib_mobile_app.activitys.Register
 import thothlib.mobile.thothlib_mobile_app.fragments.*
+import thothlib.mobile.thothlib_mobile_app.infoClass.ReservedBook
 import thothlib.mobile.thothlib_mobile_app.infoClass.Studant
 import thothlib.mobile.thothlib_mobile_app.infoClass.User
-import thothlib.mobile.thothlib_mobile_app.popup.UserPopupFragment
+import thothlib.mobile.thothlib_mobile_app.popups.BookDetailPopupFragment
+import thothlib.mobile.thothlib_mobile_app.popups.UserPopupFragment
 import thothlib.mobile.thothlib_mobile_app.services.ThothLibs
 
-class Browser : AppCompatActivity(), ListUserFragment.OnListSelected {
+class Browser : AppCompatActivity(), ListUserFragment.OnListSelected, UserPerfilFragment.OnBookListSelected {
 
     lateinit var sideBar:LinearLayout;
     lateinit var id: SharedPreferences
@@ -140,6 +141,17 @@ class Browser : AppCompatActivity(), ListUserFragment.OnListSelected {
 
     }
 
+    override fun onBookCardSelected(reservedBook: ReservedBook) {
+        var args = Bundle()
+        args.putSerializable("reservedBooksDetail", reservedBook)
+
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.book_detail_container, BookDetailPopupFragment::class.java, args)
+            .addToBackStack(null)
+            .commit()
+    }
+
     fun closePopup(v: Fragment) {
         supportFragmentManager
             .beginTransaction()
@@ -149,66 +161,64 @@ class Browser : AppCompatActivity(), ListUserFragment.OnListSelected {
     }
 
     fun userPerfilFragment() {
-        val trasaction = supportFragmentManager.beginTransaction()
-        trasaction.replace(R.id.fragment_pages, UserPerfilFragment::class.java, null)
-        trasaction.addToBackStack(null)
-        trasaction.commit()
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.fragment_pages, UserPerfilFragment::class.java, null)
+            .addToBackStack(null)
+            .commit()
         toglleSideBar(null)
     }
 
     fun searchBookFragment() {
-        val trasaction = supportFragmentManager.beginTransaction()
-        trasaction.replace(R.id.fragment_pages, SeachBookFragment::class.java, null)
-        trasaction.addToBackStack(null)
-        trasaction.commit()
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.fragment_pages, SeachBookFragment::class.java, null)
+            .addToBackStack(null)
+            .commit()
         toglleSideBar(null)
     }
 
     fun contactUsFragment() {
-        val trasaction = supportFragmentManager.beginTransaction()
-        trasaction.replace(R.id.fragment_pages, ContactFragment::class.java, null)
-        trasaction.addToBackStack(null)
-        trasaction.commit()
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.fragment_pages, ContactFragment::class.java, null)
+            .addToBackStack(null)
+            .commit()
         toglleSideBar(null)
     }
 
     fun questionsFragment() {
-        val trasaction = supportFragmentManager.beginTransaction()
-        trasaction.replace(R.id.fragment_pages, QuestionFragment::class.java, null)
-        trasaction.addToBackStack(null)
-        trasaction.commit()
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.fragment_pages, QuestionFragment::class.java, null)
+            .addToBackStack(null)
+            .commit()
         toglleSideBar(null)
     }
 
     fun listUserFragment() {
-        val trasaction = supportFragmentManager.beginTransaction()
-        trasaction.replace(R.id.fragment_pages, ListUserFragment::class.java, null)
-        trasaction.addToBackStack(null)
-        trasaction.commit()
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.fragment_pages, ListUserFragment::class.java, null)
+            .addToBackStack(null)
+            .commit()
         toglleSideBar(null)
     }
 
     fun addBookFragment() {
-        val trasaction = supportFragmentManager.beginTransaction()
-        trasaction.replace(R.id.fragment_pages, AddBookFragment::class.java, null)
-        trasaction.addToBackStack(null)
-        trasaction.commit()
-        toglleSideBar(null)
-    }
-
-    fun infoBookFragment() {
-        val trasaction = supportFragmentManager.beginTransaction()
-        trasaction.replace(R.id.fragment_pages, InfoLivroFragment::class.java, null)
-        trasaction.addToBackStack(null)
-        trasaction.commit()
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.fragment_pages, AddBookFragment::class.java, null)
+            .addToBackStack(null)
+            .commit()
         toglleSideBar(null)
     }
 
     fun readerScanner() {
-        val scanner = IntentIntegrator(this)
-        scanner.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE)
-        scanner.setBeepEnabled(false)
-        scanner.initiateScan()
+        IntentIntegrator(this)
+            .setDesiredBarcodeFormats(IntentIntegrator.QR_CODE)
+            .setBeepEnabled(false)
+            .initiateScan()
     }
 
     fun loginActivity() {

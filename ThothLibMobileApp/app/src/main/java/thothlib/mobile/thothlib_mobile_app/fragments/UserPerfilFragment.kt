@@ -1,8 +1,6 @@
 package thothlib.mobile.thothlib_mobile_app.fragments
 
-import android.app.Activity
 import android.content.Context
-import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -10,11 +8,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.widget.AppCompatTextView
-import androidx.appcompat.widget.LinearLayoutCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -22,9 +18,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import thothlib.mobile.thothlib_mobile_app.R
-import thothlib.mobile.thothlib_mobile_app.infoClass.Livro
-import thothlib.mobile.thothlib_mobile_app.infoClass.ReservedBooks
-import thothlib.mobile.thothlib_mobile_app.infoClass.Studant
+import thothlib.mobile.thothlib_mobile_app.infoClass.ReservedBook
 import thothlib.mobile.thothlib_mobile_app.services.ThothLibs
 import thothlib.mobile.thothlib_mobile_app.infoClass.User
 import java.lang.ClassCastException
@@ -36,7 +30,7 @@ class UserPerfilFragment : Fragment() {
     lateinit var tvEmail: TextView
     lateinit var id:SharedPreferences
     private lateinit var listener: OnBookListSelected
-    var reservedBooks: ArrayList<ReservedBooks> = arrayListOf()
+    var reservedBooks: ArrayList<ReservedBook> = arrayListOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -71,7 +65,6 @@ class UserPerfilFragment : Fragment() {
             override fun onResponse(call: Call<User>, response: Response<User>) {
                 if (response.isSuccessful) {
                     val usuario = response.body()
-                    val body = response.body()
 
                     tvNome.text = "${usuario?.nome}"
                     tvCpf.text = "${usuario?.cpf}"
@@ -79,7 +72,7 @@ class UserPerfilFragment : Fragment() {
 
                     if (reservedBooks.isNotEmpty()) reservedBooks.clear()
 
-                    body?.livrosLidos?.forEach { book ->
+                    usuario?.livrosLidos?.forEach { book ->
                         reservedBooks.add(book)
                     }
 
@@ -108,7 +101,7 @@ class UserPerfilFragment : Fragment() {
             )
 
         override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
-            val userWithBooks = ReservedBooks(
+            val userWithBooks = ReservedBook(
                 reservedBooks[position].id,
                 reservedBooks[position].titulo,
                 reservedBooks[position].descricao,
@@ -136,15 +129,25 @@ class UserPerfilFragment : Fragment() {
 
     }
 
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+
+        if (context is OnBookListSelected) {
+            listener = context
+        } else {
+            throw ClassCastException("$context must implemented")
+        }
+    }
+
     internal inner class ViewHolder constructor(itemView: View) :
         RecyclerView.ViewHolder(itemView) {
-        fun bind(reservedBooks: ReservedBooks) {
-            itemView.findViewById<AppCompatTextView>(R.id.book_content_title).text = reservedBooks.titulo
+        fun bind(reservedBook: ReservedBook) {
+            itemView.findViewById<AppCompatTextView>(R.id.book_content_title).text = reservedBook.titulo
         }
     }
 
     interface OnBookListSelected {
-        fun onBookCardSelected(reservedBooks: ReservedBooks)
+        fun onBookCardSelected(reservedBook: ReservedBook)
     }
 
 }
