@@ -45,21 +45,21 @@
     <string name="contact_title">Enviar</string>
     <string name="Autor">Autor</string>
     <string name="InfoPrateleira">Prateleira</string>
-    <string name="Data_Publi">Data_Publi</string>
+    <string name="Data_Publi">data de publicação</string>
     <string name="Avaliação">Avaliação</string>
     <string name="Valor">Valor</string>
     <string name="fake_autor">David Flanagan</string>
     <string name="fake_prateleira">Z5</string>
-    <string name="fake_data">10/08/2020</string>
+    <string name="fake_data">jAVA</string>
     <string name="fake_avaliacao">10/10</string>
-    <string name="fake_book_name">Programando com Javascript</string>
+    <string name="fake_book_name">Nenhum livro reservado</string>
     <string name="fake_label_reserved_book">Livro reservado:</string>
     <string name="fake_active">Ativo</string>
     <string name="fake_label_status">Status:</string>
     <string name="fake_email">usuário@bandtec.com.br:</string>
     <string name="fake_label_email">Email:</string>
-    <string name="fake_label_when_reserved">Reservado em:</string>
-    <string name="fake_label_when_give_back">Devolver em:</string>
+    <string name="fake_label_when_reserved">Linguagem do livro:</string>
+    <string name="fake_label_when_give_back">Cor da etiqueta do livro:</string>
     <string name="send_email_button">Enviar email</string>
     <string name="extend_button">Prorrogar</string>
     <string name="fake_user_name">Usuário 03</string>
@@ -71,7 +71,7 @@
     <string name="btn_baixar">BAIXAR</string>
     <string name="fake_descricao">JavaScript é a linguagem de programação da Web. A maioria dos sites modernos usa JavaScript, e todos os navegadores – em computadores de mesa, consoles de jogos, tablets e smartphones – incluem interpretadores JavaScript. Isso a torna uma das linguagens de programação mais importantes atualmente e uma das tecnologias que todo desenvolvedor Web deve conhecer</string>
     <string name="text_screen_devolucao">Devolução</string>
-    <string name="text_screen_retirada">(Retirada)</string>
+    <string name="text_screen_retirada">Retirada</string>
     <string name="text_screen_message">Ops! Algo deu errado com a sua devolução, por favor, tente novamente. Caso o erro persista, entre em contato conosco.</string>
     <string name="text_screen_tentar_novamente">Tentar Novamente</string>
     <string name="text_screen_contato">Contato</string>
@@ -92,6 +92,7 @@
     <string name="faq_answer3">Após acabar o tempo de reserva, você deve ir na biblioteca indicada para devolver o livro e marcar a devolução no App</string>
     <string name="faq_answer4">No aplicativo está indicado o local onde está o livro</string>
     <string name="fragPopup_prgSucess_title">Prorrogação feita com sucesso!</string>
+    <string name="fragPopup_prhSucess_title">Reserva feita com sucesso!</string>
     <string name="fragPopup_prgSucess_text">Esperamos que aproveite bem esse tempo extra. \n \n Boa leitura!</string>
     <string name="fragPopup_prgSucess_btn">Meu perfil</string>
     <string name="fragPopup_infoBook_title">Programando com javaScript</string>
@@ -108,7 +109,6 @@
     <string name="fragPopup_prgConfirm_btn">Aceitar</string>
 
 
-
     <!--  Strings do Kotlin  -->
     <string name="auth_response">E-mail ou senha incorreto</string>
     <string name="error_API">Erro na api, entrar em contato com o suporte</string>
@@ -119,6 +119,13 @@
     <string name="book_card_fragment_plus">Ver mais</string>
     <string name="book_search_filtro">Filtrar por: </string>
     <string name="status_user_inactive">Inativo</string>
+    <string name="leitor_qr_code">Leitor QR Code</string>
+    <string name="unavailable">Indisponível</string>
+    <string name="prateleira_book">Prateleira</string>
+    <string name="qr_code_title_withdraw">Retirada</string>
+    <string name="qr_code_description_withdraw">Escaneie o QR code abaixo para realizar a retirada do livro.</string>
+    <string name="qr_code_btn_back_withdraw">Voltar</string>
+    <string name="search_book">Pesquisar livro</string>
 
 
 </resources>

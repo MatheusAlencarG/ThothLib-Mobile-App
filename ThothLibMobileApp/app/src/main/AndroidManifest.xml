@@ -14,12 +14,6 @@
         android:theme="@style/Theme.ThothLibMobileApp">
 
         <activity
-            android:name=".activitys.DevolucaoSucesso"
-            android:exported="false" />
-        <activity
-            android:name=".activitys.DevolucaoErro"
-            android:exported="false" />
-        <activity
             android:name=".Browser"
             android:exported="false" />
         <activity
