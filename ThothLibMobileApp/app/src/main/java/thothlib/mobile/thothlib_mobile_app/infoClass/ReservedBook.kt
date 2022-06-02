@@ -1,6 +1,8 @@
 package thothlib.mobile.thothlib_mobile_app.infoClass
 
-data class ReservedBooks (
+import java.io.Serializable
+
+data class ReservedBook (
     val id: Int,
     val titulo: String,
     val descricao: String,
@@ -12,8 +14,7 @@ data class ReservedBooks (
     val qtdReservadosAgora: Int,
     val qtdDisponiveis: Int,
     val qtdEstoque: Int,
-    val fkTbBiblioteca: Int,
     val linguagem: String,
     val corEtiqueta: String,
     val qtdReservadosTotal : Int
-)
+) : Serializable

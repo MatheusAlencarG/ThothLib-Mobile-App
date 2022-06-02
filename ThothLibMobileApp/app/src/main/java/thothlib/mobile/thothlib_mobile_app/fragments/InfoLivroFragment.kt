@@ -4,23 +4,23 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.widget.AppCompatImageView
 import androidx.fragment.app.Fragment
+import com.squareup.picasso.Picasso
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import thothlib.mobile.thothlib_mobile_app.infoClass.Livro
 import thothlib.mobile.thothlib_mobile_app.R
+import thothlib.mobile.thothlib_mobile_app.infoClass.GoogleBook
 import thothlib.mobile.thothlib_mobile_app.services.ThothLibs
 
 class InfoLivroFragment : Fragment() {
 
-    lateinit var tvAutor: TextView
-    lateinit var tvPrateleira: TextView
-    lateinit var tvDataPubli: TextView
-    lateinit var tvAvaliacao: TextView
-    lateinit var tvDescricao: TextView
+    lateinit var googleBook: GoogleBook
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,34 +31,44 @@ class InfoLivroFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_info_livro, container, false)
+        googleBook = arguments?.getSerializable("searchBookDetail") as GoogleBook
 
-        tvAutor = view.findViewById(R.id.tv_autor)
-        tvPrateleira = view.findViewById(R.id.tv_prateleira)
-        tvDataPubli = view.findViewById(R.id.tv_data_public)
-        tvAvaliacao = view.findViewById(R.id.tv_avaliacao)
-        tvDescricao = view.findViewById(R.id.tv_description)
+        consultarLivro(view)
+        bodyConstructor(view)
 
-        consultarLivro();
+        view.findViewById<Button>(R.id.reserve_button_info_livro).setOnClickListener {
+
+        }
 
         return view
     }
 
-    fun consultarLivro() {
+    fun bodyConstructor(view: View) {
+
+        view.findViewById<TextView>(R.id.info_book_title).text = googleBook.title
+        view.findViewById<TextView>(R.id.tv_autor).text = googleBook.autor
+        view.findViewById<TextView>(R.id.tv_avaliacao).text = googleBook.avaliacao
+        view.findViewById<TextView>(R.id.tv_description).text = googleBook.description
+        view.findViewById<TextView>(R.id.tv_data_public).text = googleBook.publishedDate.replace("-", "/")
+
+        val imageViewInfoBook = view.findViewById<AppCompatImageView>(R.id.info_book_image)
+        if (googleBook.thumbnail.isEmpty()) {
+            imageViewInfoBook.setImageResource(R.mipmap.fotoindisponivel)
+        } else {
+            Picasso.with(view.context).load(googleBook.thumbnail).into(imageViewInfoBook)
+        }
+    }
+
+    fun consultarLivro(view: View) {
         val id = 2
 
-        // objeto do endpoint de GET /filmes/{id}
         val getLivro = ThothLibs.criar().getLivro(id)
 
-        // Callback do pacote retrofit2
         getLivro.enqueue(object : Callback<Livro> {
             override fun onResponse(call: Call<Livro>, response: Response<Livro>) {
-                if (response.isSuccessful) { // se o status da resposta é 2xx
+                if (response.isSuccessful) {
                     val livro = response.body()
-                    tvAutor.text = "${livro?.autor}"
-                    tvPrateleira.text = "${livro?.infoPrateleira}"
-                    tvDataPubli.text = "10/08/2022"
-                    tvAvaliacao.text = "10/10"
-                    tvDescricao.text = "${livro?.descricao}"
+                    view.findViewById<TextView>(R.id.tv_prateleira).text = livro?.infoPrateleira
                 } else {
                     Toast.makeText(context, "Não encontrado", Toast.LENGTH_SHORT).show()
                 }
