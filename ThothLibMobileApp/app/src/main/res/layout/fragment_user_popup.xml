@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_popup"
-    tools:context=".popup.UserPopupFragment">
+    tools:context=".popups.UserPopupFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -91,9 +91,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/user_detail_label_reserved_book"
-                android:textSize="17sp"
                 android:text="@string/fake_book_name"
-                android:textColor="@color/ligth_blue_color"/>
+                android:textColor="@color/ligth_blue_color"
+                android:textSize="17sp" />
 
             <TextView
                 android:id="@+id/user_detail_label_when_reserved"
@@ -111,7 +111,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/user_detail_label_when_reserved"
                 android:layout_marginTop="-1dp"
-                android:text="@string/fake_data"
+                android:text="@string/fake_book_name"
                 android:textColor="@color/ligth_blue_color"
                 android:textSize="17sp" />
 
@@ -130,9 +130,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/user_detail_label_when_give_back"
-                android:textSize="17sp"
-                android:text="@string/fake_data"
-                android:textColor="@color/ligth_blue_color"/>
+                android:text="@string/fake_book_name"
+                android:textColor="@color/ligth_blue_color"
+                android:textSize="17sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"

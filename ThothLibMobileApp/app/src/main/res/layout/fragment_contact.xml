@@ -13,12 +13,11 @@
             android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/contact_title"
-            android:textColor="@color/ligth_blue_color"
-            android:textAlignment="center"
-            android:textSize="40sp"
             android:layout_marginTop="50dp"
-            />
+            android:text="@string/contact_title"
+            android:textAlignment="center"
+            android:textColor="@color/ligth_blue_color"
+            android:textSize="40sp" />
 
         <TextView
             android:id="@+id/description"

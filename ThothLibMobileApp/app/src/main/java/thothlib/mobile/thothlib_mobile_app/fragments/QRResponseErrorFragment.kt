@@ -1,4 +1,4 @@
-package thothlib.mobile.thothlib_mobile_app.popup
+package thothlib.mobile.thothlib_mobile_app.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,7 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import thothlib.mobile.thothlib_mobile_app.R
 
-class ExtendBookConfirmationPopupFragment : Fragment() {
+class QRResponseErrorFragment : Fragment() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -16,8 +17,11 @@ class ExtendBookConfirmationPopupFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_extend_book_confirmation_popup, container, false)
+        val view = inflater.inflate(R.layout.fragment_qr_response_error, container, false)
+
+
 
         return view
     }
+
 }

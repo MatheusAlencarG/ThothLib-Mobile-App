@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".popup.ReservationSuccessfullyPopupFragment">
+    tools:context=".popups.ReservationSuccessfullyPopupFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="35dp"
             android:layout_marginBottom="30dp"
-            android:text="@string/fragPopup_prgSucess_title"
+            android:text="@string/fragPopup_prhSucess_title"
             android:textAlignment="center"
             android:textColor="@color/ligth_blue_color"
             android:textSize="35sp" />

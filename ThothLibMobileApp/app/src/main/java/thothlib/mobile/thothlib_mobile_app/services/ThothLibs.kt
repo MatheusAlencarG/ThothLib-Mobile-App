@@ -3,15 +3,12 @@ package thothlib.mobile.thothlib_mobile_app.services
 import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.http.Body
-import retrofit2.http.GET
-import retrofit2.http.POST
-import retrofit2.http.Path
+import retrofit2.http.*
 import thothlib.mobile.thothlib_mobile_app.infoClass.*
 
 interface ThothLibs {
 
-    @GET("/biblioteca/{idLivro}")
+    @GET("/biblioteca/exemplares/{idLivro}")
     fun getLivro(@Path("idLivro") idLivro:Int) : Call<Livro>
 
     @GET("/aluno")
@@ -21,13 +18,22 @@ interface ThothLibs {
     fun registerUser(@Body newUser: NewUser) : Call<Void>
 
     @POST("/autenticacao/{email}/{senha}")
-    fun autentication(@Path("email") email:String, @Path("senha") senha:String) : Call<Void>
+    fun autentication(@Path("email") email:String, @Path("senha") senha:String) : Call<Int>
 
     @POST("/biblioteca/{idAdmin}")
     fun postBook(@Path("idAdmin") idAdmin:Int, @Body newBook: AddNewBook) : Call<Void>
 
-    @GET("/usuario/{idUsuario}")
+    @GET("/aluno/{idUsuario}")
     fun getUsuario(@Path("idUsuario") idUserPerfil:Int) : Call<User>
+
+    @DELETE("/autenticacao/{id}")
+    fun logoutUser(@Path("id") id: Int) : Call<Void>
+
+    @PUT("/biblioteca/reservar/{idUsuario}/{tombo}")
+    fun reserveBook(@Path("idUsuario") idUsuario: Int, @Path("tombo") tombo: String) : Call<Void>
+
+    @GET("/biblioteca/listLivrosKotlin")
+    fun getGoogleBooks(@Query("name") name: String) : Call<Array<GoogleBook>>
 
     companion object {
 

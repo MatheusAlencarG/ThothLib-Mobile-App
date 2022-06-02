@@ -166,7 +166,8 @@
                 android:orientation="horizontal"
                 android:paddingHorizontal="15dp"
                 android:paddingVertical="15dp"
-                android:onClick="chooseFragment">
+                android:onClick="chooseFragment"
+                android:visibility="invisible">
 
                 <ImageView
                     android:layout_width="50dp"
@@ -191,7 +192,8 @@
                 android:orientation="horizontal"
                 android:paddingHorizontal="15dp"
                 android:paddingVertical="15dp"
-                android:onClick="chooseFragment">
+                android:onClick="chooseFragment"
+                android:visibility="invisible">
 
                 <ImageView
                     android:layout_width="50dp"
@@ -209,25 +211,26 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/info_livro"
+                android:id="@+id/reader_scanner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:paddingHorizontal="15dp"
                 android:paddingVertical="15dp"
-                android:onClick="chooseFragment">
+                android:onClick="chooseFragment"
+                android:visibility="invisible">
 
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@mipmap/menu_add_book" />
+                    android:src="@mipmap/qr_code" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:text="Tela do livro"
+                    android:layout_marginStart="15dp"
+                    android:text="@string/leitor_qr_code"
                     android:textColor="@color/white"
                     android:textSize="25sp" />
 
@@ -245,7 +248,8 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
                     android:paddingHorizontal="15dp"
-                    android:paddingVertical="15dp">
+                    android:paddingVertical="15dp"
+                    android:onClick="logout">
 
                     <ImageView
                         android:layout_width="50dp"
