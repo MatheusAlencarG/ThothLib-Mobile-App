@@ -45,7 +45,7 @@
     <string name="contact_title">Enviar</string>
     <string name="Autor">Autor</string>
     <string name="InfoPrateleira">Prateleira</string>
-    <string name="Data_Publi">Data_Publi</string>
+    <string name="Data_Publi">data de publicação</string>
     <string name="Avaliação">Avaliação</string>
     <string name="Valor">Valor</string>
     <string name="fake_autor">David Flanagan</string>
@@ -125,6 +125,7 @@
     <string name="qr_code_title_withdraw">Retirada</string>
     <string name="qr_code_description_withdraw">Escaneie o QR code abaixo para realizar a retirada do livro.</string>
     <string name="qr_code_btn_back_withdraw">Voltar</string>
+    <string name="search_book">Pesquisar livro</string>
 
 
 </resources>

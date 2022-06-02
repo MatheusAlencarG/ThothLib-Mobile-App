@@ -16,6 +16,7 @@ import retrofit2.Callback
 import retrofit2.Response
 import thothlib.mobile.thothlib_mobile_app.activitys.Login
 import thothlib.mobile.thothlib_mobile_app.fragments.*
+import thothlib.mobile.thothlib_mobile_app.infoClass.GoogleBook
 import thothlib.mobile.thothlib_mobile_app.infoClass.ReservedBook
 import thothlib.mobile.thothlib_mobile_app.infoClass.Studant
 import thothlib.mobile.thothlib_mobile_app.infoClass.User
@@ -23,7 +24,10 @@ import thothlib.mobile.thothlib_mobile_app.popups.BookDetailPopupFragment
 import thothlib.mobile.thothlib_mobile_app.popups.UserPopupFragment
 import thothlib.mobile.thothlib_mobile_app.services.ThothLibs
 
-class Browser : AppCompatActivity(), ListUserFragment.OnListSelected, UserPerfilFragment.OnBookListSelected {
+class Browser : AppCompatActivity(),
+    ListUserFragment.OnListSelected,
+    UserPerfilFragment.OnBookListSelected,
+    SeachBookFragment.OnSearchBookListSelected {
 
     lateinit var sideBar:LinearLayout;
     lateinit var id: SharedPreferences
@@ -96,11 +100,11 @@ class Browser : AppCompatActivity(), ListUserFragment.OnListSelected, UserPerfil
     fun userIsAdmin() {
 
         val idUsuario = id.getInt("id", 0)
-        val getAdmin = ThothLibs.criar().getAdmin(idUsuario)
+        val getAdmin = ThothLibs.criar().getUsuario(idUsuario)
 
         getAdmin.enqueue(object : Callback<User> {
             override fun onResponse(call: Call<User>, response: Response<User>) {
-                if (response.code() == 200) {
+                if (response.body()?.usuarioAdmin == 1) {
                     findViewById<LinearLayout>(R.id.list_user).visibility = View.VISIBLE;
                     findViewById<LinearLayout>(R.id.add_book).visibility = View.VISIBLE;
                     findViewById<LinearLayout>(R.id.reader_scanner).visibility = View.VISIBLE;
@@ -148,6 +152,17 @@ class Browser : AppCompatActivity(), ListUserFragment.OnListSelected, UserPerfil
         supportFragmentManager
             .beginTransaction()
             .replace(R.id.book_detail_container, BookDetailPopupFragment::class.java, args)
+            .addToBackStack(null)
+            .commit()
+    }
+
+    override fun OnSearchBookSelected(googleBook: GoogleBook) {
+        var args = Bundle()
+        args.putSerializable("searchBookDetail", googleBook)
+
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.fragment_pages, InfoLivroFragment::class.java, args)
             .addToBackStack(null)
             .commit()
     }

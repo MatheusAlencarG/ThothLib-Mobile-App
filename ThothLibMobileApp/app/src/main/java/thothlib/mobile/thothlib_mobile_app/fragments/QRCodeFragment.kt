@@ -47,27 +47,4 @@ class QRCodeFragment : Fragment() {
 
         return view
     }
-
-    fun reserveBook() {
-        val idUsuario = id.getInt("id", 0)
-
-        val reserveBook = ThothLibs.criar().reserveBook(idUsuario, "222222")
-
-        reserveBook.enqueue(object : Callback<Void> {
-            override fun onResponse(call: Call<Void>, response: Response<Void>) {
-                if (response.isSuccessful) {
-
-                } else {
-                    Toast.makeText(
-                        context,
-                        "Erro interno, entre em contato com o suporte",
-                        Toast.LENGTH_SHORT
-                    ).show()
-                }
-            }
-            override fun onFailure(call: Call<Void>, t: Throwable) {
-                Toast.makeText(context, "Erro na API ${t.message}", Toast.LENGTH_SHORT).show()
-            }
-        })
-    }
 }
