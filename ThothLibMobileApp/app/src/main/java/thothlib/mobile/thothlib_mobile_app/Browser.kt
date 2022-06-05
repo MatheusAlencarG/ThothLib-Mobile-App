@@ -8,26 +8,30 @@ import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
+import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.google.zxing.integration.android.IntentIntegrator
+import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import thothlib.mobile.thothlib_mobile_app.activitys.Login
 import thothlib.mobile.thothlib_mobile_app.fragments.*
-import thothlib.mobile.thothlib_mobile_app.infoClass.GoogleBook
-import thothlib.mobile.thothlib_mobile_app.infoClass.ReservedBook
-import thothlib.mobile.thothlib_mobile_app.infoClass.Studant
-import thothlib.mobile.thothlib_mobile_app.infoClass.User
-import thothlib.mobile.thothlib_mobile_app.popups.BookDetailPopupFragment
-import thothlib.mobile.thothlib_mobile_app.popups.UserPopupFragment
+import thothlib.mobile.thothlib_mobile_app.infoClass.*
+import thothlib.mobile.thothlib_mobile_app.popups.*
 import thothlib.mobile.thothlib_mobile_app.services.ThothLibs
 
 class Browser : AppCompatActivity(),
     ListUserFragment.OnListSelected,
     UserPerfilFragment.OnBookListSelected,
-    SeachBookFragment.OnSearchBookListSelected {
+    SeachBookFragment.OnSearchBookListSelected,
+    InfoLivroFragment.OnBookInfoBookSelected,
+    InfoBookDetailPopupFragment.OnReserveBookSelected,
+    ReservationSuccessfullyPopupFragment.OnReserveBookSuccessSelected,
+    QRResponseSuccessFragment.OnReserveMoreSuccessPage,
+    QRResponseErrorFragment.OnReserveMoreErrorPage,
+    DevolutionBookPopupFragment.OnBookDevolution {
 
     lateinit var sideBar:LinearLayout;
     lateinit var id: SharedPreferences
@@ -145,15 +149,31 @@ class Browser : AppCompatActivity(),
 
     }
 
-    override fun onBookCardSelected(reservedBook: ReservedBook) {
+    override fun reserveMoreSuccessPage() {
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.fragment_pages, SeachBookFragment::class.java, null)
+            .addToBackStack(null)
+            .commit()
+    }
+
+    override fun onBookCardSelected(reservedBook: ReservedBook, isReserve: Boolean) {
         var args = Bundle()
         args.putSerializable("reservedBooksDetail", reservedBook)
 
-        supportFragmentManager
-            .beginTransaction()
-            .replace(R.id.book_detail_container, BookDetailPopupFragment::class.java, args)
-            .addToBackStack(null)
-            .commit()
+        if (isReserve) {
+            supportFragmentManager
+                .beginTransaction()
+                .replace(R.id.fragment_pages, QRCodeFragment::class.java, args)
+                .addToBackStack(null)
+                .commit()
+        } else {
+            supportFragmentManager
+                .beginTransaction()
+                .replace(R.id.book_detail_container, DevolutionBookPopupFragment::class.java, args)
+                .addToBackStack(null)
+                .commit()
+        }
     }
 
     override fun OnSearchBookSelected(googleBook: GoogleBook) {
@@ -163,6 +183,63 @@ class Browser : AppCompatActivity(),
         supportFragmentManager
             .beginTransaction()
             .replace(R.id.fragment_pages, InfoLivroFragment::class.java, args)
+            .addToBackStack(null)
+            .commit()
+    }
+
+    override fun tryAgainErrorPage() {
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.fragment_pages, QRCodeFragment::class.java, null)
+            .addToBackStack(null)
+            .commit()
+    }
+
+    override fun contactUsErrorPage() {
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.fragment_pages, ContactFragment::class.java, null)
+            .addToBackStack(null)
+            .commit()
+    }
+
+    override fun reserveBookSuccessSelected(googleBook: GoogleBook) {
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.fragment_pages, UserPerfilFragment::class.java, null)
+            .addToBackStack(null)
+            .commit()
+    }
+
+    override fun reservedBookSelected(googleBook: GoogleBook) {
+        var args = Bundle()
+        args.putSerializable("reserveBookSuccessDetail", googleBook)
+
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.info_book_detail_container, ReservationSuccessfullyPopupFragment::class.java, args)
+            .addToBackStack(null)
+            .commit()
+    }
+
+    override fun selectInfoBook(googleBook: GoogleBook) {
+        var args = Bundle()
+        args.putSerializable("infoBookPopup", googleBook)
+
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.info_book_detail_container, InfoBookDetailPopupFragment::class.java, args)
+            .addToBackStack(null)
+            .commit()
+    }
+
+    override fun bookDevolution(reservedBook: ReservedBook) {
+        var args = Bundle()
+        args.putSerializable("reservedBooksDetail", reservedBook)
+
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.fragment_pages, QRCodeFragment::class.java, args)
             .addToBackStack(null)
             .commit()
     }
@@ -248,12 +325,98 @@ class Browser : AppCompatActivity(),
                 if (result.contents == null) {
                     Toast.makeText(this, "Cancelled", Toast.LENGTH_LONG).show()
                 } else {
-                    Toast.makeText(this, "Scanned: " + result.contents, Toast.LENGTH_LONG).show()
+                    val qrCodeResponseinJSON = JSONObject(result.contents)
+
+                    if (qrCodeResponseinJSON.get("status") == "RESERVADO") {
+                        withdrawBook(result.contents)
+                    } else {
+                        devolutionBook(result.contents)
+                    }
                 }
             } else {
                 super.onActivityResult(requestCode, resultCode, data)
             }
         }
+    }
+
+    fun devolutionBook(qrCodeResponse: String) {
+
+        val qrCodeResponseinJSON = JSONObject(qrCodeResponse)
+
+        var args = Bundle()
+        args.putString("qrCodeResponse", qrCodeResponse)
+
+        val idUser = qrCodeResponseinJSON.get("id").toString().toInt()
+        val tombo = qrCodeResponseinJSON.get("tombo").toString()
+
+        val devolutionBook = ThothLibs.criar().devolutionBook(tombo, idUser)
+
+        devolutionBook.enqueue(object : Callback<Void> {
+            override fun onResponse(call: Call<Void>, response: Response<Void>) {
+                if (response.isSuccessful) {
+                    supportFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.fragment_pages, QRResponseSuccessFragment::class.java, args)
+                        .addToBackStack(null)
+                        .commit()
+                    toglleSideBar(null)
+                } else {
+                    supportFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.fragment_pages, QRResponseErrorFragment::class.java, args)
+                        .addToBackStack(null)
+                        .commit()
+                    toglleSideBar(null)
+                }
+            }
+
+            override fun onFailure(call: Call<Void>, t: Throwable) {
+                Toast.makeText(baseContext, "Erro na API ${t.message}", Toast.LENGTH_SHORT).show()
+            }
+        })
+    }
+
+    fun withdrawBook(qrCodeResponse: String) {
+
+        val qrCodeResponseinJSON = JSONObject(qrCodeResponse)
+
+        var args = Bundle()
+        args.putString("qrCodeResponse", qrCodeResponse)
+
+        val idUser = qrCodeResponseinJSON.get("id").toString().toInt()
+        val tombo = qrCodeResponseinJSON.get("tombo").toString()
+
+        val withdrawBook = ThothLibs.criar().withdrawBook(tombo, idUser)
+
+        withdrawBook.enqueue(object : Callback<Void> {
+            override fun onResponse(call: Call<Void>, response: Response<Void>) {
+                if (response.isSuccessful) {
+                    supportFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.fragment_pages, QRResponseSuccessFragment::class.java, args)
+                        .addToBackStack(null)
+                        .commit()
+                    toglleSideBar(null)
+                } else {
+                    supportFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.fragment_pages, QRResponseErrorFragment::class.java, args)
+                        .addToBackStack(null)
+                        .commit()
+                    toglleSideBar(null)
+                }
+            }
+
+            override fun onFailure(call: Call<Void>, t: Throwable) {
+                supportFragmentManager
+                    .beginTransaction()
+                    .replace(R.id.fragment_pages, QRResponseErrorFragment::class.java, args)
+                    .addToBackStack(null)
+                    .commit()
+                toglleSideBar(null)
+                Toast.makeText(baseContext, "Erro na API ${t.message}", Toast.LENGTH_SHORT).show()
+            }
+        })
     }
 
 }

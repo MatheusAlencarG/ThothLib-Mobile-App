@@ -35,6 +35,12 @@ interface ThothLibs {
     @GET("/biblioteca/listLivrosKotlin")
     fun getGoogleBooks(@Query("name") name: String) : Call<Array<GoogleBook>>
 
+    @PUT("/biblioteca/retirar/{tombo}/{idUsuario}")
+    fun withdrawBook(@Path("tombo") tombo: String, @Path("idUsuario") idUsuario: Int) : Call<Void>
+
+    @PUT("/biblioteca/devolver/{tombo}/{idUsuario}")
+    fun devolutionBook(@Path("tombo") tombo: String, @Path("idUsuario") idUsuario: Int) : Call<Void>
+
     companion object {
 
         var BASE_URL = "http://18.214.213.57:8090/"

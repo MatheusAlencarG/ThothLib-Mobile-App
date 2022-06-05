@@ -3,7 +3,8 @@
     android:id="@+id/search_book_content_item"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:paddingVertical="10dp">
 
     <LinearLayout
         android:id="@+id/ll_book_card"

@@ -34,16 +34,15 @@
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:layout_below="@id/popupTitle"
-            android:src="@mipmap/img_fake_b"
-            android:layout_marginBottom="20dp"
-            />
+            android:layout_marginBottom="10dp"
+            android:src="@mipmap/fotoindisponivel" />
 
         <LinearLayout
             android:id="@+id/ll_popupStatusBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/popupImage"
-            android:layout_marginBottom="15dp"
+            android:layout_marginBottom="10dp"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -65,39 +64,13 @@
                 android:textSize="30sp" />
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/ll_popupDateBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/ll_popupStatusBox"
-            android:layout_marginBottom="15dp"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/popupDate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="20dp"
-                android:text="@string/fragPopup_infoBook_date"
-                android:textColor="@color/black"
-                android:textSize="30sp" />
-
-            <TextView
-                android:id="@+id/popupDate2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/fragPopup_infoBook_date2"
-                android:textColor="@color/ligth_blue_color"
-                android:textSize="30sp" />
-        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/ll_popupLocationBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/ll_popupDateBox"
-            android:layout_marginBottom="15dp"
+            android:layout_below="@id/ll_popupStatusBox"
+            android:layout_marginBottom="10dp"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -125,7 +98,6 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/ll_popupLocationBox"
             android:layout_centerInParent="true"
-            android:layout_marginTop="20dp"
             android:backgroundTint="@color/dark_blue"
             android:paddingHorizontal="50dp"
             android:paddingVertical="5dp"

@@ -3,11 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".popups.ReservationSuccessfullyPopupFragment">
+    tools:context=".popups.ReservationSuccessfullyPopupFragment"
+    android:padding="15dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/background_popup">
 
         <ImageView
             android:id="@+id/close_popup"
@@ -21,8 +23,8 @@
             android:id="@+id/popupTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="35dp"
-            android:layout_marginBottom="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
             android:text="@string/fragPopup_prhSucess_title"
             android:textAlignment="center"
             android:textColor="@color/ligth_blue_color"
@@ -32,32 +34,33 @@
             android:id="@+id/popupImage"
             android:layout_width="match_parent"
             android:layout_height="250dp"
-            android:src="@mipmap/img_fake_b"
-            android:layout_below="@id/popupTitle" />
+            android:layout_below="@id/popupTitle"
+            android:src="@mipmap/img_fake_b" />
 
         <TextView
             android:id="@+id/popupText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/popupImage"
-            android:text="@string/fragPopup_prgSucess_text"
-            android:textAlignment="center"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
             android:paddingHorizontal="15dp"
-            android:layout_marginTop="35dp"
-            android:layout_marginBottom="25dp"
+            android:text="@string/fragPopup_reserve_Sucess_text"
+            android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="30sp" />
 
         <Button
+            android:id="@+id/go_to_perfil_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:paddingHorizontal="50dp"
-            android:backgroundTint="@color/dark_blue"
-            android:paddingVertical="5dp"
             android:layout_below="@id/popupText"
+            android:layout_centerInParent="true"
+            android:backgroundTint="@color/dark_blue"
+            android:paddingHorizontal="50dp"
+            android:paddingVertical="5dp"
             android:text="@string/fragPopup_prgSucess_btn"
-            android:textSize="30sp"/>
+            android:textSize="30sp" />
 
 
     </RelativeLayout>
