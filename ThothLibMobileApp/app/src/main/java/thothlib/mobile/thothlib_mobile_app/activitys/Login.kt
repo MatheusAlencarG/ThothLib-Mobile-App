@@ -16,8 +16,9 @@ import thothlib.mobile.thothlib_mobile_app.R
 import thothlib.mobile.thothlib_mobile_app.services.ThothLibs
 
 import android.content.SharedPreferences
-
-
+import android.view.LayoutInflater
+import android.view.ViewGroup
+import android.widget.LinearLayout
 
 
 class Login : AppCompatActivity() {
@@ -25,6 +26,7 @@ class Login : AppCompatActivity() {
     lateinit var etEmail:EditText
     lateinit var etSenha:EditText
     lateinit var tvAuthResponse:TextView
+    lateinit var id:SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,13 +35,21 @@ class Login : AppCompatActivity() {
         etEmail = findViewById(R.id.et_email)
         etSenha = findViewById(R.id.et_senha)
         tvAuthResponse = findViewById(R.id.tv_auth_Response)
+
+        id = getSharedPreferences("idUser", AppCompatActivity.MODE_PRIVATE)
+        verificarLogin(id)
+    }
+
+    fun verificarLogin(id: SharedPreferences?) {
+        if (id?.getInt("id", 0) != 0) {
+            browsePage(findViewById(R.id.entrar));
+        }
     }
 
     fun autentication(v:View) {
         val email = etEmail.text.toString()
         val senha = etSenha.text.toString()
         var idUser:SharedPreferences
-
         val getAutentication = ThothLibs.criar().autentication(email, senha)
 
         getAutentication.enqueue(object : Callback<Int> {
@@ -64,9 +74,7 @@ class Login : AppCompatActivity() {
                 tvAuthResponse.setVisibility(View.VISIBLE)
                 tvAuthResponse.text = getString(R.string.error_API)
             }
-
         })
-
     }
 
     fun browsePage(botao: View) {

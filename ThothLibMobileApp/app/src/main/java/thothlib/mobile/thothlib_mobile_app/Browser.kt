@@ -118,12 +118,17 @@ class Browser : AppCompatActivity(),
 
     fun logout(v:View) {
         val idUsuario = id.getInt("id", 0)
+        var idUser:SharedPreferences
 
         val getAdmin = ThothLibs.criar().logoutUser(idUsuario)
 
         getAdmin.enqueue(object : Callback<Void> {
             override fun onResponse(call: Call<Void>, response: Response<Void>) {
                 if (response.isSuccessful) {
+                    idUser = getSharedPreferences("idUser", MODE_PRIVATE)
+                    val editor = idUser.edit()
+                    editor.putInt("id", 0)
+                    editor.commit()
                     loginActivity()
                 }
             }

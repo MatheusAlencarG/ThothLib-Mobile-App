@@ -105,7 +105,7 @@
                     android:id="@+id/userLevel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="10"
+                    android:text=""
                     android:textColor="#04378F"
                     android:textSize="50sp"
 
@@ -138,12 +138,25 @@
                         android:layout_height="65dp"
                         android:src="@mipmap/icon_books_read" />
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="12 Livros lidos"
-                        android:textColor="#000000"
-                        android:textSize="25sp" />
+                        >
+                        <TextView
+                            android:id="@+id/tv_qtdLivrosLidos"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="12"
+                            android:textColor="#000000"
+                            android:textSize="25sp"
+                            android:layout_marginRight="5dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Livros lidos"
+                            android:textColor="#000000"
+                            android:textSize="25sp" />
+                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -159,13 +172,25 @@
                         android:layout_height="65dp"
                         android:src="@mipmap/icon_resenha"/>
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="05 resenhas"
-                        android:textSize="25sp"
-                        android:textColor="#000000"
-                        />
+                        >
+                        <TextView
+                            android:id="@+id/tv_qtdResenhas"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="05"
+                            android:textColor="#000000"
+                            android:textSize="25sp"
+                            android:layout_marginRight="5dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Resenhas"
+                            android:textColor="#000000"
+                            android:textSize="25sp" />
+                    </LinearLayout>
                 </LinearLayout>
             </RelativeLayout>
             <Button

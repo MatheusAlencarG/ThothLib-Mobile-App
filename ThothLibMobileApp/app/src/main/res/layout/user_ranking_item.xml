@@ -20,9 +20,10 @@
             android:id="@+id/user_content_image"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@mipmap/medal1" />
+             />
 
         <TextView
+            android:id="@+id/tv_ranking_userName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/fragRanking_name"
@@ -41,13 +42,12 @@
                 android:id="@+id/rankingPts"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/fragRanking_pts"
-                android:textSize="35sp"
-                android:textColor="@color/black"
-                android:textAlignment="center"
                 android:layout_alignParentLeft="true"
-                android:layout_marginLeft="15dp"
-                />
+                android:layout_marginLeft="33dp"
+                android:text="@string/fragRanking_pts"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="35sp" />
 
             <TextView
                 android:id="@+id/rankingLvl"
