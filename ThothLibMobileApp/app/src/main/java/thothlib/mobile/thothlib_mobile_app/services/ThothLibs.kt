@@ -14,6 +14,9 @@ interface ThothLibs {
     @GET("/aluno")
     fun getStudants() : Call<Array<Studant>>
 
+    @GET("/aluno")
+    fun getUserRanking() : Call<Array<RankingUser>>
+
     @POST("/aluno")
     fun registerUser(@Body newUser: NewUser) : Call<Void>
 
