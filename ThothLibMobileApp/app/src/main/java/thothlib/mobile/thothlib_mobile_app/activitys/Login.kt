@@ -37,14 +37,9 @@ class Login : AppCompatActivity() {
         tvAuthResponse = findViewById(R.id.tv_auth_Response)
 
         id = getSharedPreferences("idUser", AppCompatActivity.MODE_PRIVATE)
-        verificarLogin(id)
+
     }
 
-    fun verificarLogin(id: SharedPreferences?) {
-        if (id?.getInt("id", 0) != 0) {
-            browsePage(findViewById(R.id.entrar));
-        }
-    }
 
     fun autentication(v:View) {
         val email = etEmail.text.toString()

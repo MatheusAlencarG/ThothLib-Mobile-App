@@ -110,12 +110,15 @@ class RankingFragment : Fragment() {
         RecyclerView.ViewHolder(itemView) {
         fun bind(rankingUser: RankingUser, position: Int) {
             itemView.findViewById<AppCompatTextView>(R.id.tv_ranking_userName).text = rankingUser.nome
-            itemView.findViewById<AppCompatTextView>(R.id.rankingLvl).text = rankingUser.qtdLivrosLidos.toString()
+            itemView.findViewById<AppCompatTextView>(R.id.rankingPts).text = "Pts: "+rankingUser.pontos.toString()
+            itemView.findViewById<AppCompatTextView>(R.id.rankingLvl).text = "Nvl: "+rankingUser.qtdLivrosLidos.toString()
 
             if (position <= 2){
                 itemView.findViewById<AppCompatImageView>(R.id.user_content_image).setImageResource(
                     rankingUser.imagem!!
                 )
+            }else{
+                itemView.findViewById<AppCompatImageView>(R.id.user_content_image).visibility = View.GONE
             }
         }
     }

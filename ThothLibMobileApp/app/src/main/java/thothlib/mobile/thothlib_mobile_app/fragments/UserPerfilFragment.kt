@@ -62,21 +62,13 @@ class UserPerfilFragment : Fragment() {
             trasaction.addToBackStack(null)
             trasaction.commit()
         }
-
-
         consultarUsuario(view)
-
-
         return view
     }
 
     fun consultarUsuario(v: View) {
 
         val idUsuario = id.getInt("id", 0)
-        println("id aqui" +  idUsuario)
-
-        Toast.makeText(context, "id usuário aqui" + idUsuario, Toast.LENGTH_SHORT).show()
-
         val getUsuario = ThothLibs.criar().getUsuario(idUsuario)
 
         getUsuario.enqueue(object : Callback<User> {
