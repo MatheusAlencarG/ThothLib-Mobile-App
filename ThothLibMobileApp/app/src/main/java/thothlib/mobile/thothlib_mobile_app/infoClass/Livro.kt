@@ -15,5 +15,6 @@ data class Livro(
   val fkTbBibliotecaval :Int,
   val linguagemval :String,
   val corEtiquetaval :String,
-  val qtdReservadosTotal:Int
+  val qtdReservadosTotal:Int,
+  val tombosDisponiveis: Array<String>
 )

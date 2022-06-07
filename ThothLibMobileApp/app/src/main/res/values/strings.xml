@@ -72,11 +72,13 @@
     <string name="fake_descricao">JavaScript é a linguagem de programação da Web. A maioria dos sites modernos usa JavaScript, e todos os navegadores – em computadores de mesa, consoles de jogos, tablets e smartphones – incluem interpretadores JavaScript. Isso a torna uma das linguagens de programação mais importantes atualmente e uma das tecnologias que todo desenvolvedor Web deve conhecer</string>
     <string name="text_screen_devolucao">Devolução</string>
     <string name="text_screen_retirada">Retirada</string>
-    <string name="text_screen_message">Ops! Algo deu errado com a sua devolução, por favor, tente novamente. Caso o erro persista, entre em contato conosco.</string>
+    <string name="text_screen_message_devolucao">Ops! Algo deu errado com a sua devolução, por favor, tente novamente. Caso o erro persista, entre em contato conosco.</string>
+    <string name="text_screen_message_retirada">Ops! Algo deu errado com a sua retirada, por favor, tente novamente. Caso o erro persista, entre em contato conosco.</string>
     <string name="text_screen_tentar_novamente">Tentar Novamente</string>
     <string name="text_screen_contato">Contato</string>
     <string name="text_screen_reservar">Reservar Mais</string>
-    <string name="text_screen_sucess_msg">Sua devolução foi registrada no sistema com sucesso. Agora basta devolver o livro na <b><font color="#32B9CD">Posição A1</font></b></string>
+    <string name="text_screen_sucess_msg_devolucao">Sua devolução foi registrada no sistema com sucesso. Agora basta devolver o livro na posição</string>
+    <string name="text_screen_sucess_msg_retirada">Sua retirada foi registrada no sistema com sucesso. Agora basta retirar o livro na posição</string>
     <string name="text_screen_points"><u>+ 10Pts</u></string>
     <string name="usuario_nivel">Usuário Nível</string>
     <string name="register_user">Usuários cadastrados</string>
@@ -94,6 +96,7 @@
     <string name="fragPopup_prgSucess_title">Prorrogação feita com sucesso!</string>
     <string name="fragPopup_prhSucess_title">Reserva feita com sucesso!</string>
     <string name="fragPopup_prgSucess_text">Esperamos que aproveite bem esse tempo extra. \n \n Boa leitura!</string>
+    <string name="fragPopup_reserve_Sucess_text">Esperamos que aproveite bem a sua escolha. \n \n Boa leitura!</string>
     <string name="fragPopup_prgSucess_btn">Meu perfil</string>
     <string name="fragPopup_infoBook_title">Programando com javaScript</string>
     <string name="fragPopup_infoBook_status">Status: </string>
@@ -101,7 +104,7 @@
     <string name="fragPopup_infoBook_date">Devolver até: </string>
     <string name="fragPopup_infoBook_date2">25/06/22</string>
     <string name="fragPopup_infoBook_location">Localização: </string>
-    <string name="fragPopup_infoBook_location2">Prateleira 03</string>
+    <string name="fragPopup_infoBook_location2">03</string>
     <string name="fragPopup_infoBook_btn">Reservar</string>
     <string name="fragPopup_prgConfirm_text">Gostaria de mais tempo para ler? Você está prestes a prorrogar a data de entrega para o dia:</string>
     <string name="fragPopup_prgConfirm_date">25/06/22</string>
@@ -127,8 +130,12 @@
     <string name="prateleira_book">Prateleira</string>
     <string name="qr_code_title_withdraw">Retirada</string>
     <string name="qr_code_description_withdraw">Escaneie o QR code abaixo para realizar a retirada do livro.</string>
+    <string name="qr_code_description_devolution">Escaneie o QR code abaixo para realizar a devolução do livro.</string>
     <string name="qr_code_btn_back_withdraw">Voltar</string>
     <string name="search_book">Pesquisar livro</string>
+    <string name="status_livro">Livro já devolvido</string>
+    <string name="withdraw_btn">Retirar</string>
+    <string name="see_reserve_btn">Ver reserva</string>
 
 
 </resources>

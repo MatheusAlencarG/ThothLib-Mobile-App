@@ -123,7 +123,8 @@ class UserPerfilFragment : Fragment() {
 
         override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
             val userWithBooks = ReservedBook(
-                reservedBooks[position].id,
+                reservedBooks[position].tombo,
+                reservedBooks[position].status,
                 reservedBooks[position].titulo,
                 reservedBooks[position].descricao,
                 reservedBooks[position].autor,
@@ -139,10 +140,40 @@ class UserPerfilFragment : Fragment() {
                 reservedBooks[position].qtdReservadosTotal
                 )
 
+            val seeReserveButton = viewHolder.itemView.findViewById<Button>(R.id.ll_book_card_button)
+            val statusBookText = viewHolder.itemView.findViewById<TextView>(R.id.status_book)
+
+            when (userWithBooks.status) {
+                "RESERVADO" -> { // Abrir QR code
+                    seeReserveButton.visibility = View.VISIBLE
+                    seeReserveButton.text = getString(R.string.withdraw_btn)
+                    statusBookText.visibility = View.GONE
+                }
+                "RETIRADO" -> {
+                    seeReserveButton.visibility = View.VISIBLE
+                    seeReserveButton.text = getString(R.string.see_reserve_btn)
+                    statusBookText.visibility = View.GONE
+                }
+                "DEVOLVIDO" -> {
+                    seeReserveButton.visibility = View.GONE
+                    statusBookText.visibility = View.VISIBLE
+                    statusBookText.setTextColor(resources.getColor(R.color.ligth_blue_color))
+                    statusBookText.text = getString(R.string.status_livro)
+                }
+            }
+
             viewHolder.bind(userWithBooks)
             viewHolder.itemView.findViewById<Button>(R.id.ll_book_card_button)
                 .setOnClickListener {
-                    listener.onBookCardSelected(userWithBooks)
+
+                    when (userWithBooks.status) {
+                        "RESERVADO" -> { // Abrir QR code
+                            listener.onBookCardSelected(userWithBooks, true)
+                        }
+                        "RETIRADO" -> { // Abrir popup
+                            listener.onBookCardSelected(userWithBooks, false)
+                        }
+                    }
                 }
         }
 
@@ -168,7 +199,7 @@ class UserPerfilFragment : Fragment() {
     }
 
     interface OnBookListSelected {
-        fun onBookCardSelected(reservedBook: ReservedBook)
+        fun onBookCardSelected(reservedBook: ReservedBook, isReserve: Boolean)
     }
 
 }
