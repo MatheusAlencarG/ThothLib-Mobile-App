@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".popups.BookDetailPopupFragment">
+    tools:context=".popups.InfoBookDetailPopupFragment"
+    android:padding="15dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -34,9 +35,8 @@
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:layout_below="@id/popupTitle"
-            android:src="@mipmap/img_fake_b"
             android:layout_marginBottom="20dp"
-            />
+            android:src="@mipmap/img_fake_b" />
 
         <LinearLayout
             android:id="@+id/ll_popupStatusBox"
@@ -104,7 +104,7 @@
             android:backgroundTint="@color/dark_blue"
             android:paddingHorizontal="50dp"
             android:paddingVertical="5dp"
-            android:text="@string/btn_retirar"
+            android:text="@string/btn_reserva"
             android:textSize="30sp" />
 
     </RelativeLayout>

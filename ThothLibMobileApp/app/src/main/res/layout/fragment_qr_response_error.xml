@@ -26,7 +26,7 @@
             android:layout_below="@+id/title"
             android:layout_marginTop="50dp"
             android:paddingHorizontal="50dp"
-            android:text="@string/text_screen_message"
+            android:text="@string/text_screen_message_devolucao"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="22sp" />

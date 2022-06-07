@@ -1,5 +1,6 @@
 package thothlib.mobile.thothlib_mobile_app.fragments
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -17,8 +18,11 @@ import thothlib.mobile.thothlib_mobile_app.infoClass.Livro
 import thothlib.mobile.thothlib_mobile_app.R
 import thothlib.mobile.thothlib_mobile_app.infoClass.GoogleBook
 import thothlib.mobile.thothlib_mobile_app.services.ThothLibs
+import java.lang.ClassCastException
 
 class InfoLivroFragment : Fragment() {
+
+    private lateinit var listener: OnBookInfoBookSelected
 
     lateinit var googleBook: GoogleBook
 
@@ -33,14 +37,28 @@ class InfoLivroFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_info_livro, container, false)
         googleBook = arguments?.getSerializable("searchBookDetail") as GoogleBook
 
-        consultarLivro(view)
+        consultarLivro(view, googleBook)
         bodyConstructor(view)
 
         view.findViewById<Button>(R.id.reserve_button_info_livro).setOnClickListener {
-
+            listener.selectInfoBook(googleBook)
         }
 
         return view
+    }
+
+    interface OnBookInfoBookSelected {
+        fun selectInfoBook(googleBook: GoogleBook)
+    }
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+
+        if (context is OnBookInfoBookSelected) {
+            listener = context
+        } else {
+            throw ClassCastException("$context must implemented")
+        }
     }
 
     fun bodyConstructor(view: View) {
@@ -59,8 +77,8 @@ class InfoLivroFragment : Fragment() {
         }
     }
 
-    fun consultarLivro(view: View) {
-        val id = 2
+    fun consultarLivro(view: View, googleBook: GoogleBook) {
+        val id = googleBook.idLivro
 
         val getLivro = ThothLibs.criar().getLivro(id)
 
@@ -70,7 +88,7 @@ class InfoLivroFragment : Fragment() {
                     val livro = response.body()
                     view.findViewById<TextView>(R.id.tv_prateleira).text = livro?.infoPrateleira
                 } else {
-                    Toast.makeText(context, "Não encontrado", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, "Livro não encontrado, entrar em contato", Toast.LENGTH_SHORT).show()
                 }
             }
 
