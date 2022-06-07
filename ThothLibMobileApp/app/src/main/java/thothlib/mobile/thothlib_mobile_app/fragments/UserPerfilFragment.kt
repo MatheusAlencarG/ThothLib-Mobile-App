@@ -28,6 +28,9 @@ class UserPerfilFragment : Fragment() {
     lateinit var tvNome: TextView
     lateinit var tvCpf: TextView
     lateinit var tvEmail: TextView
+    lateinit var tvLevel: TextView
+    lateinit var tvQtdResenhas: TextView
+    lateinit var tvQtdLivrosLidos: TextView
     lateinit var id:SharedPreferences
     private lateinit var listener: OnBookListSelected
     var reservedBooks: ArrayList<ReservedBook> = arrayListOf()
@@ -48,6 +51,18 @@ class UserPerfilFragment : Fragment() {
         tvNome = view.findViewById(R.id.tv_user_name)
         tvCpf = view.findViewById(R.id.tv_user_cpf)
         tvEmail = view.findViewById(R.id.tv_user_email)
+        tvLevel = view.findViewById(R.id.userLevel)
+        tvQtdLivrosLidos = view.findViewById(R.id.tv_qtdLivrosLidos)
+        tvQtdResenhas = view.findViewById(R.id.tv_qtdResenhas)
+
+        view.findViewById<Button>(R.id.rankingButton).setOnClickListener {
+
+            val trasaction = requireActivity().supportFragmentManager.beginTransaction()
+            trasaction.replace(R.id.fragment_pages, RankingFragment::class.java, null)
+            trasaction.addToBackStack(null)
+            trasaction.commit()
+        }
+
 
         consultarUsuario(view)
 
@@ -58,6 +73,9 @@ class UserPerfilFragment : Fragment() {
     fun consultarUsuario(v: View) {
 
         val idUsuario = id.getInt("id", 0)
+        println("id aqui" +  idUsuario)
+
+        Toast.makeText(context, "id usuário aqui" + idUsuario, Toast.LENGTH_SHORT).show()
 
         val getUsuario = ThothLibs.criar().getUsuario(idUsuario)
 
@@ -69,6 +87,9 @@ class UserPerfilFragment : Fragment() {
                     tvNome.text = "${usuario?.nome}"
                     tvCpf.text = "${usuario?.cpf}"
                     tvEmail.text = "${usuario?.email}"
+                    tvLevel.text = "${usuario?.qtdLivrosLidos}"
+                    tvQtdLivrosLidos.text = "${usuario?.qtdLivrosLidos}"
+                    tvQtdResenhas.text = "${usuario?.qtdResenhas}"
 
                     if (reservedBooks.isNotEmpty()) reservedBooks.clear()
 

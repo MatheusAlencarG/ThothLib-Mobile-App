@@ -110,7 +110,10 @@
     <string name="fragPopup_prgConfirm_date">25/06/22</string>
     <string name="fragPopup_prgConfirm_text2">Clique no botão abaixo para confirmar a prorrogação de devolução.</string>
     <string name="fragPopup_prgConfirm_btn">Aceitar</string>
-
+    <string name="fragRanking_title">Ranking</string>
+    <string name="fragRanking_name">Usuário 0001</string>
+    <string name="fragRanking_pts">345 Pts</string>
+    <string name="fragRanking_lvl">Nvl 12</string>
 
     <!--  Strings do Kotlin  -->
     <string name="auth_response">E-mail ou senha incorreto</string>
